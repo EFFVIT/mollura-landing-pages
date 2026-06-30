@@ -189,11 +189,12 @@ function FaqSection() {
     <section className="mol-pad" style={{ background: WHITE, padding: '80px 48px' }}>
       <div style={{ maxWidth: 1100, margin: '0 auto' }}>
         <h2 className="mol-h2-xl" style={{
-          fontFamily: "'Montserrat', sans-serif",
-          fontWeight: 800,
-          fontSize: 38,
-          letterSpacing: '-0.02em',
-          color: '#1a1a1a',
+          fontFamily: "'Judson', Georgia, serif",
+          fontWeight: 400,
+          fontSize: 40,
+          lineHeight: 1.129,
+          color: DARK,
+          textAlign: 'center',
           marginBottom: 36,
         }}>
           Common Questions
@@ -333,12 +334,12 @@ export default function MolluraLP({
           <div style={{
             position: 'absolute',
             inset: 0,
-            background: 'linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%)',
+            background: 'linear-gradient(180deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.92) 100%)',
           }} />
         </div>
 
         {/* Layer 2: doctor headshot (left ~62% of hero) */}
-        <div style={{ position: 'absolute', left: 0, top: 0, width: '62%', height: '100%', overflow: 'hidden' }}>
+        <div className="mol-hero-doctor" style={{ position: 'absolute', left: 0, top: 0, width: '62%', height: '100%', overflow: 'hidden' }}>
           <img
             src="/hero-bg-doctor.png"
             alt=""
@@ -825,7 +826,7 @@ export default function MolluraLP({
       </section>
 
       {/* ── FINANCING ────────────────────────────────────────────────────── */}
-      <section style={{ background: '#edeeee', padding: '82px 48px' }}>
+      <section className="mol-fin-outer" style={{ background: '#edeeee', padding: '82px 48px' }}>
         <div style={{ maxWidth: 1300, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 64, alignItems: 'start' }} className="mol-fin-section">
 
           {/* Left — text content */}
@@ -860,7 +861,7 @@ export default function MolluraLP({
                 lineHeight: 'normal',
                 marginBottom: 4,
               }}>As low as</p>
-              <p style={{
+              <p className="mol-price-big" style={{
                 fontFamily: "'Lato', sans-serif",
                 fontWeight: 900,
                 fontSize: 71,
@@ -917,7 +918,7 @@ export default function MolluraLP({
           </div>
 
           {/* Right — photo */}
-          <div style={{ borderRadius: 5, overflow: 'hidden', height: 620 }}>
+          <div className="mol-fin-photo" style={{ borderRadius: 5, overflow: 'hidden', height: 620 }}>
             <img
               src="/financing-photo.png"
               alt=""
@@ -933,16 +934,17 @@ export default function MolluraLP({
       <section className="mol-pad" style={{ background: WHITE, padding: '80px 48px' }}>
         <div style={{ maxWidth: 1100, margin: '0 auto' }}>
           <h2 className="mol-h2-xl" style={{
-            fontFamily: "'Montserrat', sans-serif",
-            fontWeight: 800,
+            fontFamily: "'Judson', Georgia, serif",
+            fontWeight: 400,
             fontSize: 40,
-            color: '#1a1a2e',
+            lineHeight: 1.129,
+            color: '#000000',
+            textAlign: 'center',
             marginBottom: 10,
-            letterSpacing: '-0.02em',
           }}>
             What Gives Patients Confidence
           </h2>
-          <p style={{ fontSize: 16, color: STEEL, marginBottom: 52, lineHeight: 1.5 }}>
+          <p style={{ fontSize: 16, color: STEEL, marginBottom: 52, lineHeight: 1.5, textAlign: 'center' }}>
             Real capabilities. Real safety. Real patient-first care.
           </p>
           <div className="mol-commit-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 32 }}>
@@ -1005,7 +1007,7 @@ export default function MolluraLP({
       <FaqSection />
 
       {/* ── MAP + FOOTER FORM ─────────────────────────────────────────────── */}
-      <section style={{ background: '#edeeee', padding: '82px 48px 0' }}>
+      <section className="mol-map-outer" style={{ background: '#edeeee', padding: '82px 48px 0' }}>
         <div style={{ maxWidth: 1300, margin: '0 auto' }}>
 
           {/* Two-column grid */}
@@ -1047,7 +1049,7 @@ export default function MolluraLP({
           </div>
 
           {/* Phone + Address */}
-          <div style={{
+          <div className="mol-contact-row" style={{
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'flex-start',
@@ -1085,7 +1087,7 @@ export default function MolluraLP({
         </div>
 
         {/* Copyright bar */}
-        <div style={{ textAlign: 'center', padding: '20px 48px 32px' }}>
+        <div className="mol-footer-bar" style={{ textAlign: 'center', padding: '20px 48px 32px' }}>
           <p style={{
             fontFamily: "'Roboto', sans-serif",
             fontWeight: 400,

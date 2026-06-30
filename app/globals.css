@@ -161,4 +161,25 @@ button { font-family: inherit; }
 
   /* CTA button rows */
   .mol-btn-row { flex-wrap: wrap !important; gap: 12px !important; }
+
+  /* Hero doctor layer — hide on mobile, room bg + gradient is sufficient */
+  .mol-hero-doctor { display: none !important; }
+
+  /* Financing outer section padding */
+  .mol-fin-outer { padding: 40px 20px !important; }
+
+  /* Financing photo — reduce fixed height */
+  .mol-fin-photo { height: 300px !important; }
+
+  /* Price — scale down from 71px */
+  .mol-price-big { font-size: 50px !important; }
+
+  /* Map+form outer section padding */
+  .mol-map-outer { padding: 40px 20px 0 !important; }
+
+  /* Phone + address — stack vertically */
+  .mol-contact-row { flex-direction: column !important; align-items: flex-start !important; gap: 20px !important; padding: 32px 0 20px !important; }
+
+  /* Footer copyright padding */
+  .mol-footer-bar { padding: 16px 20px 28px !important; }
 }
