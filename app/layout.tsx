@@ -29,11 +29,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         />
       </head>
       <body>
-        {/* CHAT_WIDGET_PLACEHOLDER — replace data-widget-id before launch */}
         <Script
           src="https://widgets.leadconnectorhq.com/loader.js"
           data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
-          data-widget-id="XXXXXXXXXXXXXXXXXXXXXXXX"
+          data-widget-id="678e7adf1b88770f1e648c17"
           strategy="afterInteractive"
         />
         <noscript>
