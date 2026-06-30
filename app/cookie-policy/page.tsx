@@ -86,14 +86,14 @@ export default function CookiePolicyPage() {
       </main>
 
       {/* Footer */}
-      <footer style={{ background: DARK_NAV, padding: '32px 48px', textAlign: 'center' }}>
-        <img src="/logo-mollura.png" alt="Mollura Medical Hair Restoration" style={{ height: 48, width: 'auto', marginBottom: 16 }} />
-        <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: 13, margin: '0 0 8px' }}>
+      <footer style={{ background: WHITE, borderTop: '1px solid #e8e8e8', padding: '32px 48px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 10 }}>
+        <img src="/logo-mollura.png" alt="Mollura Medical Hair Restoration" style={{ height: 48, width: 'auto' }} />
+        <p style={{ color: '#555', fontSize: 13, margin: 0 }}>
           393 Franklin Avenue, Suite 105, Franklin Square, NY 11010
         </p>
-        <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: 13, margin: 0 }}>
-          <a href="/privacy-policy" style={{ color: 'rgba(255,255,255,0.5)', textDecoration: 'none', marginRight: 16 }}>Privacy Policy</a>
-          <a href="/cookie-policy" style={{ color: 'rgba(255,255,255,0.5)', textDecoration: 'none' }}>Cookie Policy</a>
+        <p style={{ fontSize: 13, margin: 0 }}>
+          <a href="/privacy-policy" style={{ color: '#555', textDecoration: 'none', marginRight: 16 }}>Privacy Policy</a>
+          <a href="/cookie-policy" style={{ color: '#555', textDecoration: 'none' }}>Cookie Policy</a>
         </p>
       </footer>
     </div>
