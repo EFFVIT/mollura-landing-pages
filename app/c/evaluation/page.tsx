@@ -1,16 +1,16 @@
 import type { Metadata } from 'next'
-import LafueLPV2 from '@/components/LafueLPV2'
+import MolluraLP from '@/components/MolluraLP'
 
 export const metadata: Metadata = {
-  title: 'Hair Loss Educational Information | L.A. FUE Hair NYC',
+  title: 'Hair Loss Evaluation | Mollura Medical Hair Restoration',
   robots: 'noindex, nofollow',
 }
 
 export default function EvaluationPage() {
   return (
-    <LafueLPV2
-      heroFormId="FBArZQM26K9JBzzAmmjJ"
-      bottomFormId="7w8zla8FIE2qhMqwp1NQ"
+    <MolluraLP
+      heroFormId="MERXSja58XwPWQkz54I0"
+      bottomFormId="cp78H1dY6oCkMQF6k56v"
     />
   )
 }

@@ -108,3 +108,57 @@ button { font-family: inherit; }
   /* CTA button rows */
   .lp-btn-row { flex-wrap: wrap !important; gap: 12px !important; }
 }
+
+/* ═══ MolluraLP – Responsive Overrides ═══ */
+
+@media (max-width: 768px) {
+  /* Nav */
+  .mol-nav      { height: auto !important; padding: 16px 20px !important; flex-wrap: wrap; gap: 10px; }
+  .mol-nav-logo { height: 44px !important; }
+  .mol-nav-btns { gap: 8px !important; flex-wrap: wrap; }
+  .mol-nav-btn  { font-size: 12px !important; padding: 10px 16px !important; }
+
+  /* Hero */
+  .mol-hero         { min-height: auto !important; }
+  .mol-hero-content { flex-direction: column !important; }
+  .mol-hero-left    { width: 100% !important; padding: 32px 20px 20px !important; }
+  .mol-hero-h1      { font-size: 28px !important; }
+  .mol-hero-right   { width: 100% !important; padding: 12px 20px 36px !important; }
+
+  /* Section padding */
+  .mol-pad     { padding-left: 20px !important; padding-right: 20px !important; }
+  .mol-nosales { padding: 40px 20px 48px !important; }
+
+  /* Steps */
+  .mol-steps-grid { grid-template-columns: 1fr !important; }
+  .mol-step-divider { border-left: none !important; border-top: 1px solid #dce8ef; }
+
+  /* Features */
+  .mol-features-grid { grid-template-columns: 1fr !important; }
+
+  /* Bio */
+  .mol-bio-grid { grid-template-columns: 1fr !important; }
+
+  /* Reviews */
+  .mol-reviews-grid { grid-template-columns: 1fr !important; }
+
+  /* Financing */
+  .mol-fin-section { grid-template-columns: 1fr !important; }
+  .mol-fin-left    { padding: 40px 20px !important; }
+  .mol-price       { font-size: 56px !important; }
+
+  /* Commitment */
+  .mol-commit-grid { grid-template-columns: 1fr !important; }
+
+  /* Map + form */
+  .mol-map-form { grid-template-columns: 1fr !important; min-height: auto !important; }
+  .mol-map-col  { min-height: 260px; }
+  .mol-form-col { padding: 32px 20px !important; }
+
+  /* Heading scale */
+  .mol-h2-xl { font-size: 26px !important; }
+  .mol-h2-lg { font-size: 22px !important; }
+
+  /* CTA button rows */
+  .mol-btn-row { flex-wrap: wrap !important; gap: 12px !important; }
+}

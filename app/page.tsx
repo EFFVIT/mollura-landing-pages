@@ -1,5 +1,5 @@
 import { redirect } from 'next/navigation'
 
 export default function Home() {
-  redirect('/hair-loss')
+  redirect('/c/hair-restoration')
 }
