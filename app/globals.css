@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700;900&family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;500;600&family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Judson:wght@400;700&family=Jost:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&family=Roboto:wght@400;500;600;700&family=Lato:wght@700;900&family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;500;600&display=swap');
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; }
@@ -114,15 +114,15 @@ button { font-family: inherit; }
 @media (max-width: 768px) {
   /* Nav */
   .mol-nav      { height: auto !important; padding: 16px 20px !important; flex-wrap: wrap; gap: 10px; }
-  .mol-nav-logo { height: 44px !important; }
+  .mol-nav-logo { height: 60px !important; }
   .mol-nav-btns { gap: 8px !important; flex-wrap: wrap; }
-  .mol-nav-btn  { font-size: 12px !important; padding: 10px 16px !important; }
+  .mol-nav-btn  { font-size: 13px !important; padding: 10px 16px !important; }
 
   /* Hero */
   .mol-hero         { min-height: auto !important; }
   .mol-hero-content { flex-direction: column !important; }
-  .mol-hero-left    { width: 100% !important; padding: 32px 20px 20px !important; }
-  .mol-hero-h1      { font-size: 28px !important; }
+  .mol-hero-left    { width: 100% !important; padding: 32px 20px 24px !important; justify-content: flex-start !important; }
+  .mol-hero-h1      { font-size: 30px !important; }
   .mol-hero-right   { width: 100% !important; padding: 12px 20px 36px !important; }
 
   /* Section padding */
@@ -131,7 +131,7 @@ button { font-family: inherit; }
 
   /* Steps */
   .mol-steps-grid { grid-template-columns: 1fr !important; }
-  .mol-step-divider { border-left: none !important; border-top: 1px solid #dce8ef; }
+  .mol-step-card  { min-height: auto !important; }
 
   /* Features */
   .mol-features-grid { grid-template-columns: 1fr !important; }

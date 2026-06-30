@@ -111,6 +111,26 @@ function PatientFirstIcon() {
   )
 }
 
+// ── FEATURE CHECK ICON ───────────────────────────────────────────────────────
+
+function FeatureCheckIcon() {
+  return (
+    <svg viewBox="0 0 85.554 84" width="84" height="84" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style={{ flexShrink: 0, display: 'block' }}>
+      {/* Badge outer shape: white fill + blue border */}
+      <path
+        d="M85.554 41.9998C85.554 37.5331 80.1418 34.0011 78.8632 29.9703C77.5426 25.7932 79.8526 19.6824 77.3861 16.2035C74.8931 12.6929 68.4972 13.0699 65.0749 10.5141C61.6848 7.98407 60.0707 1.61239 55.9973 0.25492C52.0705 -1.05238 47.1307 3.08598 42.7763 3.08598C38.422 3.08598 33.4835 -1.05238 29.5568 0.25492C25.4847 1.61239 23.8707 7.98407 20.4819 10.5141C17.0569 13.0714 10.6609 12.6929 8.1679 16.2035C5.70146 19.681 8.01139 25.7961 6.69083 29.9703C5.41219 34.0011 0 37.5331 0 41.9998C0 46.4664 5.41219 49.997 6.69083 54.0293C8.01139 58.2063 5.70146 64.3171 8.1679 67.7961C10.6609 71.3066 17.0569 70.9296 20.4819 73.4854C23.8707 76.0155 25.4847 82.3871 29.5568 83.7446C33.4835 85.0519 38.4262 80.9136 42.7777 80.9136C47.1293 80.9136 52.0719 85.0534 55.9987 83.7446C60.0707 82.3871 61.6848 76.0155 65.0763 73.4854C68.4986 70.9282 74.8945 71.3066 77.3875 67.7961C79.854 64.3185 77.544 58.2035 78.8646 54.0293C80.1418 49.9984 85.5554 46.4678 85.5554 41.9998H85.554Z"
+        fill="white"
+      />
+      {/* Checkmark: blue, shifted slightly toward center of badge */}
+      <path
+        transform="translate(0, 4)"
+        d="M64.822 33.6413L40.4622 58.6292C39.3471 59.7731 37.8868 60.3436 36.4292 60.3436C34.9717 60.3436 33.5086 59.7731 32.3935 58.6292L20.7321 46.6671C18.5046 44.3822 18.5046 40.6796 20.7321 38.3947C22.9596 36.1097 26.5719 36.1097 28.7994 38.3947L36.4279 46.2198L56.7533 25.3675C58.9808 23.0826 62.5945 23.0826 64.8206 25.3675C67.048 27.6524 67.048 31.355 64.8206 33.6399L64.822 33.6413Z"
+        fill={DARK}
+      />
+    </svg>
+  )
+}
+
 // ── HELPERS ─────────────────────────────────────────────────────────────────
 
 function StarRow({ size = 16 }: { size?: number }) {
@@ -238,37 +258,37 @@ export default function MolluraLP({
 
       {/* ── NAV ──────────────────────────────────────────────────────────── */}
       <nav className="mol-nav" style={{
-        background: DARK_NAV,
-        height: 100,
+        background: WHITE,
+        height: 164,
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
-        padding: '0 56px',
+        padding: '0 64px',
         position: 'sticky',
         top: 0,
         zIndex: 100,
+        boxShadow: '0px 4px 22.7px 0px rgba(0,0,0,0.45)',
       }}>
         <img
           src="/logo-mollura.png"
           alt="Mollura Medical Hair Restoration"
           className="mol-nav-logo"
-          style={{ height: 60, width: 'auto', display: 'block' }}
+          style={{ height: 109, width: 'auto', display: 'block' }}
         />
-        <div className="mol-nav-btns" style={{ display: 'flex', gap: 14, alignItems: 'center' }}>
+        <div className="mol-nav-btns" style={{ display: 'flex', gap: 16, alignItems: 'center' }}>
           <a
             href="#form"
             className="mol-nav-btn"
             style={{
-              background: TEAL,
+              background: DARK,
               color: WHITE,
-              fontFamily: "'Montserrat', sans-serif",
-              fontWeight: 700,
-              fontSize: 14,
+              fontFamily: "'Roboto', sans-serif",
+              fontWeight: 500,
+              fontSize: 18,
               textTransform: 'uppercase' as const,
-              borderRadius: 50,
-              padding: '12px 26px',
+              borderRadius: 62,
+              padding: '15px 22px',
               textDecoration: 'none',
-              letterSpacing: '0.05em',
               whiteSpace: 'nowrap' as const,
             }}
           >
@@ -278,16 +298,15 @@ export default function MolluraLP({
             href="tel:+15166144608"
             className="mol-nav-btn"
             style={{
-              background: WHITE,
-              color: DARK_NAV,
-              fontFamily: "'Montserrat', sans-serif",
-              fontWeight: 700,
-              fontSize: 14,
+              background: 'transparent',
+              color: '#2e2f2a',
+              fontFamily: "'Roboto', sans-serif",
+              fontWeight: 500,
+              fontSize: 18,
               textTransform: 'uppercase' as const,
-              borderRadius: 50,
-              padding: '12px 26px',
+              borderRadius: 62,
+              padding: '15px 22px',
               textDecoration: 'none',
-              letterSpacing: '0.05em',
               whiteSpace: 'nowrap' as const,
             }}
           >
@@ -298,72 +317,88 @@ export default function MolluraLP({
 
       {/* ── HERO ─────────────────────────────────────────────────────────── */}
       <section className="mol-hero" id="form" style={{
-        background: `linear-gradient(135deg, ${DARK_NAV} 0%, ${DARK} 100%)`,
+        position: 'relative',
         minHeight: 680,
+        overflow: 'hidden',
         display: 'flex',
-        alignItems: 'stretch',
       }}>
-        <div className="mol-hero-content" style={{ display: 'flex', width: '100%', alignItems: 'stretch' }}>
-          {/* Left col */}
+        {/* Layer 1: office/room background (full section) */}
+        <div style={{ position: 'absolute', inset: 0, overflow: 'hidden' }}>
+          <img
+            src="/hero-bg-room.png"
+            alt=""
+            aria-hidden="true"
+            style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'right center', display: 'block' }}
+          />
+          <div style={{
+            position: 'absolute',
+            inset: 0,
+            background: 'linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%)',
+          }} />
+        </div>
+
+        {/* Layer 2: doctor headshot (left ~62% of hero) */}
+        <div style={{ position: 'absolute', left: 0, top: 0, width: '62%', height: '100%', overflow: 'hidden' }}>
+          <img
+            src="/hero-bg-doctor.png"
+            alt=""
+            aria-hidden="true"
+            style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top', display: 'block' }}
+          />
+          <div style={{
+            position: 'absolute',
+            inset: 0,
+            background: 'linear-gradient(180deg, rgba(0,0,0,0) 35%, rgba(0,0,0,0.8) 89%)',
+          }} />
+        </div>
+
+        {/* Content */}
+        <div className="mol-hero-content" style={{
+          position: 'relative',
+          zIndex: 2,
+          display: 'flex',
+          width: '100%',
+          alignItems: 'stretch',
+        }}>
+          {/* Left col - text anchored to bottom */}
           <div className="mol-hero-left" style={{
             width: '55%',
             display: 'flex',
             flexDirection: 'column',
-            justifyContent: 'center',
+            justifyContent: 'flex-end',
             padding: '64px 56px 64px 64px',
           }}>
-            <p style={{
-              fontSize: 12,
-              fontWeight: 700,
-              color: TEAL,
-              textTransform: 'uppercase' as const,
-              letterSpacing: '0.12em',
-              marginBottom: 16,
-            }}>
-              Mollura Medical Hair Restoration
-            </p>
             <h1 className="mol-hero-h1" style={{
-              fontFamily: "'Montserrat', sans-serif",
-              fontWeight: 800,
-              fontSize: 46,
+              fontFamily: "'Judson', Georgia, 'Times New Roman', serif",
+              fontWeight: 400,
+              fontSize: 52,
               color: WHITE,
-              lineHeight: 1.15,
-              marginBottom: 20,
-              letterSpacing: '-0.02em',
+              lineHeight: 1.13,
+              marginBottom: 22,
             }}>
               A Clear Medical Path for Hair Thinning &amp; Hair Loss
             </h1>
             <p style={{
-              fontSize: 17,
-              color: 'rgba(255,255,255,0.75)',
-              marginBottom: 10,
-              lineHeight: 1.5,
-              fontWeight: 600,
+              fontFamily: "'Poppins', sans-serif",
+              fontWeight: 500,
+              fontSize: 25,
+              color: WHITE,
+              marginBottom: 14,
+              lineHeight: 1.35,
             }}>
               General information reviewed during educational visits
             </p>
-            <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.62)', marginBottom: 36, lineHeight: 1.6, maxWidth: 440 }}>
+            <p style={{
+              fontFamily: "'Jost', 'Open Sans', sans-serif",
+              fontWeight: 400,
+              fontSize: 18,
+              color: 'rgba(255,255,255,0.85)',
+              marginBottom: 0,
+              lineHeight: 1.55,
+              maxWidth: 520,
+            }}>
               Request educational information to better understand hair loss topics.
             </p>
-            <a
-              href="#form"
-              style={{
-                display: 'inline-block',
-                alignSelf: 'flex-start',
-                background: TEAL,
-                color: WHITE,
-                fontFamily: "'Montserrat', sans-serif",
-                fontWeight: 700,
-                fontSize: 13,
-                textTransform: 'uppercase' as const,
-                letterSpacing: '0.08em',
-                borderRadius: 50,
-                padding: '16px 36px',
-                textDecoration: 'none',
-              }}
-            >
-              Request Your Hair Consultation
-            </a>
           </div>
 
           {/* Right col - form */}
@@ -377,89 +412,105 @@ export default function MolluraLP({
           }}>
             <div style={{
               background: WHITE,
-              borderRadius: 10,
-              padding: '32px 28px 24px',
+              borderRadius: 8,
+              padding: '28px 24px 24px',
               width: '100%',
-              maxWidth: 520,
-              boxShadow: '0 20px 60px rgba(0,0,0,0.4)',
+              maxWidth: 540,
+              boxShadow: '10px 10px 10.1px rgba(0,0,0,0.32)',
             }}>
               <p style={{
-                fontFamily: "'Montserrat', sans-serif",
-                fontWeight: 700,
-                fontSize: 17,
-                color: DARK_NAV,
-                marginBottom: 4,
+                fontFamily: "'Poppins', sans-serif",
+                fontWeight: 500,
+                fontSize: 22,
+                color: '#1a1a1a',
+                marginBottom: 20,
                 textAlign: 'center',
                 lineHeight: 1.3,
               }}>
-                Request Your Hair Consultation
-              </p>
-              <p style={{ fontSize: 13, color: '#666', textAlign: 'center', marginBottom: 20 }}>
-                Educational information about hair loss - no obligation.
+                Request Educational Information
               </p>
               <GhlForm formId={heroFormId} height={400} formName="Hero Form - Mollura Hair Loss" />
+            </div>
+
+            {/* Stars + trust line */}
+            <div style={{ marginTop: 20, display: 'flex', alignItems: 'center', gap: 14, maxWidth: 540, width: '100%' }}>
+              <img src="/Group-8.png" alt="5 star rating" style={{ height: 36, width: 'auto', flexShrink: 0 }} />
+              <p style={{
+                fontFamily: "'Poppins', sans-serif",
+                fontWeight: 500,
+                fontSize: 15,
+                color: WHITE,
+                lineHeight: 1.45,
+                margin: 0,
+              }}>
+                Patient-focused care.<br />No pressure educational discussions.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
       {/* ── STEPS ────────────────────────────────────────────────────────── */}
-      <section className="mol-pad" style={{ background: WHITE, padding: '72px 48px 56px' }}>
+      <section className="mol-pad" style={{ background: WHITE, padding: '72px 48px 48px' }}>
         <div style={{ maxWidth: 1100, margin: '0 auto' }}>
           <h2 className="mol-h2-xl" style={{
-            fontFamily: "'Montserrat', sans-serif",
-            fontWeight: 800,
+            fontFamily: "'Judson', Georgia, serif",
+            fontWeight: 400,
             fontSize: 40,
-            letterSpacing: '-0.02em',
-            color: '#1a1a2e',
-            marginBottom: 8,
+            lineHeight: 1.129,
+            color: '#1a1a1a',
+            marginBottom: 16,
             textAlign: 'center',
           }}>
             Your Next Steps Are Simple
           </h2>
-          <p style={{ fontSize: 16, color: STEEL, textAlign: 'center', marginBottom: 52, lineHeight: 1.5 }}>
+          <p style={{
+            fontFamily: "'Poppins', sans-serif",
+            fontWeight: 500,
+            fontSize: 25,
+            color: '#1a1a1a',
+            textAlign: 'center',
+            marginBottom: 52,
+            lineHeight: 'normal',
+          }}>
             It&apos;s simpler than you think, and it starts with learning more.
           </p>
 
           <div className="mol-steps-grid" style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(3, 1fr)',
-            gap: 0,
+            gap: 40,
           }}>
             {[
-              { icon: <StepIcon1 />, label: 'Step 1', title: 'Schedule a Physician-led educational visit' },
-              { icon: <StepIcon2 />, label: 'Step 2', title: 'Understand Your Hair Loss Pattern' },
-              { icon: <StepIcon3 />, label: 'Step 3', title: 'Review Non-Surgical Care Options' },
+              { icon: <StepIcon1 />, title: 'Schedule a Physician-led educational visit' },
+              { icon: <StepIcon2 />, title: 'Understand Your Hair Loss Pattern' },
+              { icon: <StepIcon3 />, title: 'Review Non-Surgical Care Options' },
             ].map((step, i) => (
               <div
                 key={i}
-                className={`mol-step${i > 0 ? ' mol-step-divider' : ''}`}
+                className="mol-step-card"
                 style={{
-                  padding: '32px 40px',
-                  borderLeft: i > 0 ? `1px solid #dce8ef` : 'none',
+                  background: DARK,
+                  border: '7px solid #203e66',
+                  borderRadius: 31,
+                  padding: '44px 28px 36px',
                   display: 'flex',
                   flexDirection: 'column',
                   alignItems: 'center',
-                  textAlign: 'center',
-                  background: i === 1 ? '#f8fbfd' : WHITE,
+                  minHeight: 314,
                 }}
               >
-                <div style={{
-                  width: 120,
-                  height: 120,
-                  borderRadius: '50%',
-                  background: DARK,
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  marginBottom: 24,
+                <div style={{ flexShrink: 0 }}>{step.icon}</div>
+                <div style={{ flex: 1 }} />
+                <h3 style={{
+                  fontFamily: "'Poppins', sans-serif",
+                  fontWeight: 700,
+                  fontSize: 25,
+                  color: WHITE,
+                  textAlign: 'center',
+                  lineHeight: 1.3,
+                  margin: 0,
                 }}>
-                  {step.icon}
-                </div>
-                <p style={{ fontSize: 11, fontWeight: 700, color: TEAL, textTransform: 'uppercase' as const, letterSpacing: '0.1em', marginBottom: 10 }}>
-                  {step.label}
-                </p>
-                <h3 style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 18, color: '#1a1a2e', lineHeight: 1.35 }}>
                   {step.title}
                 </h3>
               </div>
@@ -467,108 +518,175 @@ export default function MolluraLP({
           </div>
 
           <p style={{
+            fontFamily: "'Jost', sans-serif",
+            fontWeight: 400,
+            fontSize: 18,
+            color: '#1a1a1a',
             textAlign: 'center',
-            fontSize: 15,
-            color: STEEL,
             marginTop: 40,
-            fontStyle: 'italic',
+            lineHeight: 'normal',
           }}>
-            No pressure educational discussions.
+            No pressure. No sales pitch. Just answers.
           </p>
         </div>
       </section>
 
       {/* ── NOSALES ──────────────────────────────────────────────────────── */}
-      <div className="mol-nosales" style={{ background: DARK, padding: '56px 48px', textAlign: 'center' }}>
+      <div className="mol-nosales" style={{ background: WHITE, padding: '56px 48px 72px', textAlign: 'center' }}>
         <h2 className="mol-h2-lg" style={{
-          fontFamily: "'Montserrat', sans-serif",
-          fontWeight: 800,
-          fontSize: 36,
-          color: WHITE,
-          marginBottom: 12,
-          letterSpacing: '-0.02em',
+          fontFamily: "'Judson', Georgia, serif",
+          fontWeight: 400,
+          fontSize: 40,
+          lineHeight: 1.129,
+          color: '#1a1a1a',
+          marginBottom: 20,
         }}>
           Straight Answers. No Obligation.
         </h2>
-        <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.78)', marginBottom: 32, maxWidth: 520, margin: '0 auto 32px' }}>
-          You&apos;re in the right place - thousands start here every week.
+        <p style={{
+          fontFamily: "'Poppins', sans-serif",
+          fontWeight: 500,
+          fontSize: 25,
+          color: '#1a1a1a',
+          maxWidth: 840,
+          margin: '0 auto 40px',
+          lineHeight: 'normal',
+        }}>
+          Educational discussion designed to help you make informed decisions.
         </p>
         <a
           href="#form"
           style={{
             display: 'inline-block',
-            background: WHITE,
-            color: DARK,
-            fontFamily: "'Montserrat', sans-serif",
-            fontWeight: 700,
-            fontSize: 13,
+            background: DARK,
+            color: WHITE,
+            fontFamily: "'Roboto', sans-serif",
+            fontWeight: 500,
+            fontSize: 18,
             textTransform: 'uppercase' as const,
-            letterSpacing: '0.08em',
-            borderRadius: 50,
-            padding: '16px 40px',
+            borderRadius: 62,
+            padding: '15px 40px',
             textDecoration: 'none',
           }}
         >
           Learn About Hair Loss
         </a>
+        <p style={{
+          fontFamily: "'Jost', sans-serif",
+          fontWeight: 400,
+          fontSize: 18,
+          color: '#1a1a1a',
+          marginTop: 24,
+          lineHeight: 'normal',
+        }}>
+          Fast. Private. No obligation.
+        </p>
       </div>
 
       {/* ── FEATURES ─────────────────────────────────────────────────────── */}
-      <section className="mol-pad" style={{ background: DARK_NAV, padding: '80px 48px' }}>
-        <div style={{ maxWidth: 1100, margin: '0 auto' }}>
+      <section className="mol-pad" style={{ background: DARK, padding: '80px 48px' }}>
+        <div style={{ maxWidth: 1200, margin: '0 auto' }}>
           <h2 className="mol-h2-xl" style={{
-            fontFamily: "'Montserrat', sans-serif",
-            fontWeight: 800,
+            fontFamily: "'Judson', Georgia, serif",
+            fontWeight: 400,
             fontSize: 40,
+            lineHeight: 1.129,
             color: WHITE,
-            marginBottom: 10,
-            letterSpacing: '-0.02em',
+            textAlign: 'center',
+            marginBottom: 16,
           }}>
             Why Patients Choose Our Team
           </h2>
-          <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.65)', marginBottom: 48, lineHeight: 1.5 }}>
+          <p style={{
+            fontFamily: "'Poppins', sans-serif",
+            fontWeight: 500,
+            fontSize: 25,
+            color: WHITE,
+            textAlign: 'center',
+            marginBottom: 52,
+            lineHeight: 'normal',
+          }}>
             Real care. Real support. Real patient-first focus.
           </p>
 
           <div className="mol-features-grid" style={{
             display: 'grid',
             gridTemplateColumns: '1fr 1fr',
-            gap: 40,
-            marginBottom: 48,
+            gap: '20px 48px',
+            marginBottom: 52,
           }}>
-            <div style={{ background: DARK_CARD, borderRadius: 12, padding: '32px 32px 28px' }}>
-              <h3 style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 18, color: WHITE, marginBottom: 20 }}>
-                Conservative, Non-Surgical Focus
-              </h3>
-              <CheckItem text="Information explaining how hair loss patterns may vary" />
-              <CheckItem text="Clear explanations &amp; general educational discussion" />
-            </div>
-            <div style={{ background: DARK_CARD, borderRadius: 12, padding: '32px 32px 28px' }}>
-              <h3 style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 18, color: WHITE, marginBottom: 20 }}>
-                Support at Every Stage
-              </h3>
-              <CheckItem text="Educational discussions informed by medical knowledge" />
-              <CheckItem text="Educational discussions informed by clinical experience" />
-            </div>
+            {[
+              'Information explaining how hair loss patterns may vary',
+              'Educational discussions informed by medical knowledge',
+              'Conservative, Non-Surgical Focus',
+              'Support at Every Stage',
+              'Clear explanations & general educational discussion',
+              'Educational discussions informed by clinical experience',
+            ].map((text, i) => (
+              <div key={i} style={{ display: 'flex', alignItems: 'center' }}>
+                <div style={{ position: 'relative', zIndex: 1, flexShrink: 0 }}>
+                  <FeatureCheckIcon />
+                </div>
+                <div style={{
+                  background: TEAL,
+                  borderRadius: 69,
+                  padding: '12px 20px 12px 28px',
+                  marginLeft: -20,
+                  flex: 1,
+                  minHeight: 76,
+                  display: 'flex',
+                  alignItems: 'center',
+                }}>
+                  <span style={{
+                    fontFamily: "'Jost', sans-serif",
+                    fontWeight: 700,
+                    fontSize: 18,
+                    color: WHITE,
+                    lineHeight: 1.35,
+                  }}>
+                    {text}
+                  </span>
+                </div>
+              </div>
+            ))}
           </div>
 
-          <div className="mol-btn-row" style={{ display: 'flex', justifyContent: 'center' }}>
+          <div className="mol-btn-row" style={{ display: 'flex', justifyContent: 'center', gap: 24 }}>
             <a
               href="#form"
               style={{
-                background: TEAL,
-                color: WHITE,
-                fontFamily: "'Montserrat', sans-serif",
-                fontWeight: 700,
-                fontSize: 13,
+                background: '#e6fbfd',
+                border: '1px solid #e6fbfd',
+                color: '#1a1a1a',
+                fontFamily: "'Roboto', sans-serif",
+                fontWeight: 500,
+                fontSize: 18,
                 textTransform: 'uppercase' as const,
-                letterSpacing: '0.08em',
-                borderRadius: 50,
-                padding: '16px 44px',
+                borderRadius: 62,
+                padding: '15px 32px',
                 textDecoration: 'none',
+                whiteSpace: 'nowrap' as const,
               }}
             >
               Request Educational Information
+            </a>
+            <a
+              href="#form"
+              style={{
+                background: 'transparent',
+                border: '2px solid #e6fbfd',
+                color: '#e8f1fa',
+                fontFamily: "'Roboto', sans-serif",
+                fontWeight: 500,
+                fontSize: 18,
+                textTransform: 'uppercase' as const,
+                borderRadius: 62,
+                padding: '15px 32px',
+                textDecoration: 'none',
+                whiteSpace: 'nowrap' as const,
+              }}
+            >
+              Learn About Hair Loss
             </a>
           </div>
         </div>
@@ -576,42 +694,68 @@ export default function MolluraLP({
 
       {/* ── BIO ──────────────────────────────────────────────────────────── */}
       <section className="mol-pad" style={{ background: WHITE, padding: '80px 48px' }}>
-        <div style={{ maxWidth: 1100, margin: '0 auto' }}>
-          <h2 className="mol-h2-xl" style={{
-            fontFamily: "'Montserrat', sans-serif",
-            fontWeight: 800,
-            fontSize: 40,
-            color: '#1a1a2e',
-            marginBottom: 40,
-            letterSpacing: '-0.02em',
-          }}>
-            Medical Oversight You Can Trust
-          </h2>
-          <div className="mol-bio-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 56, alignItems: 'start' }}>
-            <div>
-              <p style={{ fontSize: 13, fontWeight: 700, color: TEAL, textTransform: 'uppercase' as const, letterSpacing: '0.1em', marginBottom: 6 }}>
-                Meet Your Physician
-              </p>
-              <h3 style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 800, fontSize: 28, color: '#1a1a2e', marginBottom: 24, lineHeight: 1.2 }}>
-                Dr. Anthony Mollura
-              </h3>
-              <p style={{ fontSize: 15, lineHeight: 1.75, color: '#444', marginBottom: 18 }}>
-                Dr. Mollura&apos;s medical background includes providing general medical care earlier in his career before transitioning his professional focus to hair loss evaluation. His current practice emphasizes clinical assessment, patient education, and individualized planning related to hair loss concerns.
-              </p>
-              <p style={{ fontSize: 15, lineHeight: 1.75, color: '#444', marginBottom: 18 }}>
-                Dr. Mollura operates a medical practice dedicated to the evaluation and management of hair loss. Patient care emphasizes direct physician involvement and medically appropriate decision-making.
-              </p>
-              <p style={{ fontSize: 14, lineHeight: 1.7, color: '#777', fontStyle: 'italic' }}>
-                Mollura Medical Hair Restoration provides services in accordance with applicable medical regulations, professional standards, and ethical guidelines related to hair loss evaluation and non-surgical management.
-              </p>
-            </div>
-            <div style={{ borderRadius: 12, overflow: 'hidden', background: PANEL }}>
+        <div style={{ maxWidth: 1300, margin: '0 auto' }}>
+          <div className="mol-bio-grid" style={{ display: 'grid', gridTemplateColumns: '45% 1fr', gap: 64, alignItems: 'start' }}>
+
+            {/* Photo — LEFT */}
+            <div style={{ borderRadius: 5, overflow: 'hidden', flexShrink: 0 }}>
               <img
                 src="/dr-mollura.png"
                 alt="Dr. Anthony Mollura - Mollura Medical Hair Restoration"
                 style={{ width: '100%', display: 'block', objectFit: 'cover' }}
               />
             </div>
+
+            {/* Text — RIGHT */}
+            <div>
+              <h2 className="mol-h2-xl" style={{
+                fontFamily: "'Judson', Georgia, serif",
+                fontWeight: 400,
+                fontSize: 40,
+                lineHeight: 1.129,
+                color: '#1a1a1a',
+                marginBottom: 16,
+              }}>
+                Medical Oversight You Can Trust
+              </h2>
+              <p style={{
+                fontFamily: "'Poppins', sans-serif",
+                fontWeight: 500,
+                fontSize: 25,
+                color: '#1a1a1a',
+                lineHeight: 'normal',
+                marginBottom: 32,
+              }}>
+                Feedback collected from educational discussions and shared information.
+              </p>
+              <p style={{ fontFamily: "'Jost', sans-serif", fontWeight: 400, fontSize: 18, lineHeight: 1.7, color: '#1a1a1a', marginBottom: 20 }}>
+                Dr. Mollura&apos;s medical background includes providing general medical care earlier in his career before transitioning his professional focus to hair loss evaluation. His current practice emphasizes clinical assessment, patient education, and individualized planning related to hair loss concerns.
+              </p>
+              <p style={{ fontFamily: "'Jost', sans-serif", fontWeight: 400, fontSize: 18, lineHeight: 1.7, color: '#1a1a1a', marginBottom: 20 }}>
+                Dr. Mollura operates a medical practice dedicated to the evaluation and management of hair loss. Patient care emphasizes direct physician involvement and medically appropriate decision-making.
+              </p>
+              <p style={{ fontFamily: "'Jost', sans-serif", fontWeight: 400, fontSize: 18, lineHeight: 1.7, color: '#1a1a1a', marginBottom: 40 }}>
+                Mollura Medical Hair Restoration provides services in accordance with applicable medical regulations, professional standards, and ethical guidelines related to hair loss evaluation and non-surgical management.
+              </p>
+              <a
+                href="#form"
+                style={{
+                  display: 'inline-block',
+                  background: DARK,
+                  color: WHITE,
+                  fontFamily: "'Roboto', sans-serif",
+                  fontWeight: 500,
+                  fontSize: 18,
+                  textTransform: 'uppercase' as const,
+                  borderRadius: 62,
+                  padding: '15px 32px',
+                  textDecoration: 'none',
+                }}
+              >
+                Learn About Hair Loss
+              </a>
+            </div>
+
           </div>
         </div>
       </section>
@@ -620,15 +764,27 @@ export default function MolluraLP({
       <section className="mol-pad" style={{ background: '#f4f8fb', padding: '80px 48px' }}>
         <div style={{ maxWidth: 1100, margin: '0 auto' }}>
           <h2 className="mol-h2-xl" style={{
-            fontFamily: "'Montserrat', sans-serif",
-            fontWeight: 800,
+            fontFamily: "'Judson', Georgia, serif",
+            fontWeight: 400,
             fontSize: 40,
-            color: '#1a1a2e',
+            lineHeight: 1.129,
+            color: '#000000',
+            textAlign: 'center',
             marginBottom: 40,
-            letterSpacing: '-0.02em',
           }}>
             Real Patients. Real Results.
           </h2>
+          <p style={{
+            fontFamily: "'Poppins', sans-serif",
+            fontWeight: 500,
+            fontSize: 25,
+            color: '#000000',
+            textAlign: 'center',
+            lineHeight: 'normal',
+            marginBottom: 40,
+          }}>
+            Feedback may be collected to improve educational communication. Individual experiences vary.
+          </p>
           <div className="mol-reviews-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24 }}>
             {[
               {
@@ -669,69 +825,107 @@ export default function MolluraLP({
       </section>
 
       {/* ── FINANCING ────────────────────────────────────────────────────── */}
-      <section style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', minHeight: 440 }} className="mol-fin-section">
-        {/* Left panel */}
-        <div className="mol-fin-left" style={{
-          background: PANEL,
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          padding: '56px 56px 56px 64px',
-        }}>
-          <h2 className="mol-h2-lg" style={{
-            fontFamily: "'Montserrat', sans-serif",
-            fontWeight: 800,
-            fontSize: 34,
-            color: '#1a1a2e',
-            marginBottom: 14,
-            letterSpacing: '-0.02em',
-            lineHeight: 1.25,
-          }}>
-            Getting Help for Hair Loss Can Be More Affordable Than You Think
-          </h2>
-          <p style={{ fontSize: 15, color: STEEL, marginBottom: 28, lineHeight: 1.6 }}>
-            Flexible monthly plans built for real patients.
-          </p>
-          <div style={{ marginBottom: 28 }}>
-            <p style={{ fontSize: 13, color: STEEL, marginBottom: 4 }}>As low as</p>
-            <p style={{ fontSize: 13, color: '#999', textDecoration: 'line-through', marginBottom: 2 }}>$7,000</p>
-            <span className="mol-price" style={{
-              fontFamily: "'Montserrat', sans-serif",
-              fontWeight: 900,
-              fontSize: 72,
-              color: DARK,
-              lineHeight: 1,
-            }}>$188</span>
-            <span style={{ fontSize: 18, color: STEEL, fontWeight: 600 }}>/mo</span>
+      <section style={{ background: '#edeeee', padding: '82px 48px' }}>
+        <div style={{ maxWidth: 1300, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 64, alignItems: 'start' }} className="mol-fin-section">
+
+          {/* Left — text content */}
+          <div className="mol-fin-left" style={{ display: 'flex', flexDirection: 'column' }}>
+            <h2 className="mol-h2-lg" style={{
+              fontFamily: "'Judson', Georgia, serif",
+              fontWeight: 400,
+              fontSize: 40,
+              lineHeight: 1.129,
+              color: '#2c2e2b',
+              marginBottom: 14,
+            }}>
+              Getting Help for Hair Loss Can Be{' '}
+              <span style={{ color: DARK }}>More Affordable Than You Think</span>
+            </h2>
+            <p style={{
+              fontFamily: "'Poppins', sans-serif",
+              fontWeight: 500,
+              fontSize: 25,
+              color: '#2c2e2b',
+              lineHeight: 'normal',
+              marginBottom: 24,
+            }}>
+              Flexible monthly plans built for real patients.
+            </p>
+            <div style={{ marginBottom: 32 }}>
+              <p style={{
+                fontFamily: "'Poppins', sans-serif",
+                fontWeight: 500,
+                fontSize: 25,
+                color: '#2c2e2b',
+                lineHeight: 'normal',
+                marginBottom: 4,
+              }}>As low as</p>
+              <p style={{
+                fontFamily: "'Lato', sans-serif",
+                fontWeight: 900,
+                fontSize: 71,
+                color: DARK,
+                lineHeight: 1.129,
+                margin: 0,
+              }}>$188/mo</p>
+            </div>
+
+            {/* White card */}
+            <div style={{
+              background: WHITE,
+              borderRadius: 15,
+              padding: '32px 40px',
+            }}>
+              <p style={{
+                fontFamily: "'Poppins', sans-serif",
+                fontWeight: 500,
+                fontSize: 25,
+                color: '#2c2e2b',
+                lineHeight: 'normal',
+                marginBottom: 16,
+              }}>
+                Fast, simple payment plans
+              </p>
+              <p style={{
+                fontFamily: "'Roboto', sans-serif",
+                fontWeight: 400,
+                fontSize: 12,
+                color: '#000000',
+                lineHeight: 1.5,
+                marginBottom: 24,
+              }}>
+                The above payment was calculated at 21.90% APR over 60 months. This purchase would have a total cost of $11,453. A down payment in the amount of monthly payment amount is due at the time of purchase. Payment amount rounded up to nearest whole number. 0% APR and other promotional rates subject to eligibility. Payment options through Cherry Technologies, Inc. are issued by the following lending partners: withcherry.com/lending-partners. See withcherry.com/terms for details.
+              </p>
+              <a
+                href="#form"
+                style={{
+                  display: 'inline-block',
+                  background: DARK,
+                  color: WHITE,
+                  fontFamily: "'Roboto', sans-serif",
+                  fontWeight: 500,
+                  fontSize: 18,
+                  textTransform: 'uppercase' as const,
+                  borderRadius: 62,
+                  padding: '15px 32px',
+                  textDecoration: 'none',
+                }}
+              >
+                Request Educational Information
+              </a>
+            </div>
           </div>
-          <a
-            href="#form"
-            style={{
-              display: 'inline-block',
-              alignSelf: 'flex-start',
-              background: DARK,
-              color: WHITE,
-              fontFamily: "'Montserrat', sans-serif",
-              fontWeight: 700,
-              fontSize: 13,
-              textTransform: 'uppercase' as const,
-              letterSpacing: '0.08em',
-              borderRadius: 50,
-              padding: '14px 36px',
-              textDecoration: 'none',
-            }}
-          >
-            Request Educational Information
-          </a>
-        </div>
-        {/* Right photo */}
-        <div style={{ overflow: 'hidden' }}>
-          <img
-            src="/financing-photo.png"
-            alt=""
-            aria-hidden="true"
-            style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top', display: 'block' }}
-          />
+
+          {/* Right — photo */}
+          <div style={{ borderRadius: 5, overflow: 'hidden', height: 620 }}>
+            <img
+              src="/financing-photo.png"
+              alt=""
+              aria-hidden="true"
+              style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top', display: 'block' }}
+            />
+          </div>
+
         </div>
       </section>
 
@@ -811,58 +1005,100 @@ export default function MolluraLP({
       <FaqSection />
 
       {/* ── MAP + FOOTER FORM ─────────────────────────────────────────────── */}
-      <section className="mol-map-form" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', minHeight: 480 }}>
-        {/* Map */}
-        <div className="mol-map-col" style={{ overflow: 'hidden', minHeight: 320 }}>
-          <img
-            src="/footer-map.png"
-            alt="Mollura Medical Hair Restoration location map"
-            style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
-          />
-        </div>
-        {/* Form */}
-        <div className="mol-form-col" style={{ background: DARK_NAV, padding: '48px 56px' }}>
-          <p style={{ fontSize: 11, fontWeight: 700, color: TEAL, textTransform: 'uppercase' as const, letterSpacing: '0.1em', marginBottom: 10 }}>
-            Visit Our Practice
-          </p>
-          <h2 className="mol-h2-lg" style={{
-            fontFamily: "'Montserrat', sans-serif",
-            fontWeight: 800,
-            fontSize: 28,
-            color: WHITE,
-            marginBottom: 8,
-            letterSpacing: '-0.02em',
-            lineHeight: 1.3,
+      <section style={{ background: '#edeeee', padding: '82px 48px 0' }}>
+        <div style={{ maxWidth: 1300, margin: '0 auto' }}>
+
+          {/* Two-column grid */}
+          <div className="mol-map-form" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 64, alignItems: 'start' }}>
+
+            {/* Map — LEFT */}
+            <div className="mol-map-col" style={{ position: 'relative', borderRadius: 12, overflow: 'hidden', minHeight: 320 }}>
+              <img
+                src="/footer-map.png"
+                alt="Mollura Medical Hair Restoration location map"
+                style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+              />
+              {/* Visit Our Practice badge */}
+              <div style={{
+                position: 'absolute',
+                top: 24,
+                left: 28,
+                background: '#d9d9d9',
+                borderRadius: 62,
+                padding: '12px 20px',
+              }}>
+                <p style={{
+                  fontFamily: "'Roboto', sans-serif",
+                  fontWeight: 500,
+                  fontSize: 15,
+                  color: '#2c2e2b',
+                  textTransform: 'uppercase' as const,
+                  margin: 0,
+                  whiteSpace: 'nowrap',
+                }}>Visit Our Practice</p>
+              </div>
+            </div>
+
+            {/* Form — RIGHT */}
+            <div className="mol-form-col">
+              <GhlForm formId={bottomFormId} height={500} formName="Footer Form - Mollura Hair Loss" />
+            </div>
+
+          </div>
+
+          {/* Phone + Address */}
+          <div style={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'flex-start',
+            gap: 80,
+            padding: '48px 0 32px',
+            flexWrap: 'wrap' as const,
           }}>
-            Mollura Medical Hair Restoration
-          </h2>
-          <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.65)', marginBottom: 24, lineHeight: 1.7 }}>
-            393 Franklin Avenue Suite 105<br />
-            Franklin Square, NY 11010<br />
-            <a href="tel:+15166144608" style={{ color: TEAL, textDecoration: 'none' }}>(516) 614-4608</a>
+            <a href="tel:+15166144608" style={{ display: 'flex', alignItems: 'center', gap: 12, textDecoration: 'none' }}>
+              <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M20.3 16.9L17.6 14.2C16.8 13.4 15.5 13.4 14.7 14.2L13.3 15.6C12.8 16.1 12 16.1 11.5 15.7C10.2 14.8 9 13.7 7.9 12.5C6.8 11.4 5.8 10.2 4.9 8.9C4.5 8.4 4.5 7.6 5 7.1L6.4 5.7C7.2 4.9 7.2 3.6 6.4 2.8L3.7 0.1C2.9-0.7 1.6-0.7 0.8 0.1L0.1 0.8C-1.4 2.3 0.4 7.5 5.8 12.8C11.1 18.1 16.3 19.8 17.8 18.3L18.5 17.6C19.3 16.9 19.3 15.7 18.5 14.9L20.3 16.9Z" fill={DARK}/>
+              </svg>
+              <span style={{
+                fontFamily: "'Roboto', sans-serif",
+                fontWeight: 700,
+                fontSize: 25,
+                color: DARK,
+                lineHeight: 'normal',
+              }}>(516) 614-4608</span>
+            </a>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+              <svg width="18" height="29" viewBox="0 0 18 29" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M9 0C4 0 0 4 0 9C0 15.8 9 29 9 29C9 29 18 15.8 18 9C18 4 14 0 9 0ZM9 12C7.3 12 6 10.7 6 9C6 7.3 7.3 6 9 6C10.7 6 12 7.3 12 9C12 10.7 10.7 12 9 12Z" fill={DARK}/>
+              </svg>
+              <div>
+                <p style={{ fontFamily: "'Jost', sans-serif", fontWeight: 700, fontSize: 18, color: DARK, lineHeight: 'normal', margin: 0 }}>
+                  393 Franklin Avenue Suite 105
+                </p>
+                <p style={{ fontFamily: "'Roboto', sans-serif", fontWeight: 400, fontSize: 18, color: '#2c2e2b', lineHeight: 'normal', margin: 0 }}>
+                  Franklin Square, NY 11010
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        {/* Copyright bar */}
+        <div style={{ textAlign: 'center', padding: '20px 48px 32px' }}>
+          <p style={{
+            fontFamily: "'Roboto', sans-serif",
+            fontWeight: 400,
+            fontSize: 14,
+            color: '#2c2e2b',
+            textTransform: 'uppercase' as const,
+            lineHeight: '30px',
+            margin: 0,
+          }}>
+            &copy; 2025 Hair Restoration &bull; <a href="/privacy-policy" style={{ color: '#2c2e2b', textDecoration: 'none' }}>Privacy Policy</a> &bull; <a href="/hipaa-policy" style={{ color: '#2c2e2b', textDecoration: 'none' }}>HIPAA Policy</a>
           </p>
-          <GhlForm formId={bottomFormId} height={410} formName="Footer Form - Mollura Hair Loss" />
         </div>
       </section>
-
-      {/* ── FOOTER BAR ───────────────────────────────────────────────────── */}
-      <footer className="mol-pad" style={{
-        background: '#18181f',
-        padding: '24px 48px',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        flexWrap: 'wrap' as const,
-        gap: 12,
-      }}>
-        <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.45)', margin: 0 }}>
-          &copy; 2026 Mollura Medical Hair Restoration
-        </p>
-        <div style={{ display: 'flex', gap: 24 }}>
-          <a href="/privacy-policy" style={{ fontSize: 13, color: 'rgba(255,255,255,0.45)', textDecoration: 'none' }}>Privacy Policy</a>
-          <a href="/cookie-policy" style={{ fontSize: 13, color: 'rgba(255,255,255,0.45)', textDecoration: 'none' }}>Cookie Policy</a>
-        </div>
-      </footer>
     </div>
   )
 }
