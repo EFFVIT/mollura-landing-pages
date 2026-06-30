@@ -1,116 +1,99 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Cookie Policy | L.A. FUE Hair NYC',
+  title: 'Cookie Policy | Mollura Medical Hair Restoration',
   robots: 'noindex, nofollow',
 }
 
-const DARK_NAV = '#2e2e2f'
-const NAVY = '#2a548b'
-const WHITE = '#ffffff'
+const DARK     = '#175566'
+const DARK_NAV = '#2a2a34'
+const WHITE    = '#ffffff'
 
 export default function CookiePolicyPage() {
   return (
-    <div style={{ fontFamily: 'Poppins, sans-serif', color: '#1a1a1a', background: WHITE }}>
+    <div style={{ fontFamily: "'Jost', 'Open Sans', sans-serif", color: '#1a1a1a', background: WHITE }}>
+
       {/* Header */}
-      <header style={{ background: DARK_NAV, padding: '20px 48px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-        <img
-          src="/logo-lafue.png"
-          alt="L.A. FUE Hair NYC"
-          style={{ height: 48, width: 'auto' }}
-        />
-        <a
-          href="tel:5169285500"
-          style={{ color: WHITE, textDecoration: 'none', fontSize: 16, fontWeight: 600 }}
-        >
-          (516) 928-5500
+      <header style={{ background: WHITE, padding: '20px 48px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', boxShadow: '0 2px 8px rgba(0,0,0,0.08)' }}>
+        <img src="/logo-mollura.png" alt="Mollura Medical Hair Restoration" style={{ height: 60, width: 'auto' }} />
+        <a href="tel:5163543876" style={{ color: DARK, textDecoration: 'none', fontSize: 16, fontWeight: 600 }}>
+          (516) 354-3876
         </a>
       </header>
 
       {/* Banner */}
-      <div style={{ background: NAVY, padding: '48px 48px', textAlign: 'center' }}>
-        <h1 style={{ color: WHITE, fontSize: 36, fontWeight: 700, margin: 0 }}>Cookie Policy</h1>
+      <div style={{ background: DARK, padding: '48px 48px', textAlign: 'center' }}>
+        <h1 style={{ fontFamily: "'Judson', Georgia, serif", fontWeight: 400, color: WHITE, fontSize: 40, margin: 0, lineHeight: 1.129 }}>Cookie Policy</h1>
         <p style={{ color: 'rgba(255,255,255,0.7)', margin: '12px 0 0', fontSize: 14 }}>Last Updated: September 12, 2025</p>
       </div>
 
       {/* Content */}
       <main style={{ maxWidth: 860, margin: '0 auto', padding: '64px 48px' }}>
-        <p style={{ fontSize: 16, lineHeight: 1.8, color: '#444', marginBottom: 48 }}>
-          This Cookie Policy explains how L.A.FUE Hair uses cookies and similar technologies to recognize visitors to <strong>https://start.lafuehairnyc.com</strong>. It describes what these technologies are, why they are used, and your rights to control them. In some cases, cookies may collect personal information, or information that becomes personal when combined with other data.
-        </p>
 
-        <hr style={{ border: 'none', borderTop: '1px solid #e8e8e8', marginBottom: 48 }} />
-
-        <Section title="What Are Cookies?">
-          <p>Cookies are small data files placed on your computer or mobile device when you visit a website. Website owners use cookies to make their sites function, operate efficiently, and provide reporting information.</p>
-          <p>First-party cookies are set by the website you are visiting. Third-party cookies come from other parties and enable features like advertising, interactive content, and analytics. Third parties can recognize your device across multiple websites.</p>
+        <Section title="What Are Cookies">
+          <p>As is common practice with almost all professional websites, this site uses cookies, which are tiny files that are downloaded to your computer to improve your experience. This page describes what information they gather, how we use it, and why we sometimes need to store these cookies. We will also share how you can prevent these cookies from being stored, however this may downgrade or break certain elements of the site&apos;s functionality.</p>
+          <p>For more general information on cookies see the Wikipedia article on HTTP Cookies.</p>
         </Section>
 
-        <Section title="Why Do We Use Cookies?">
-          <p>Essential or strictly necessary cookies are required for the technical operation of the website. Additional cookies help track user interests and enhance experience. Third parties serve cookies through the website for advertising and analytics purposes.</p>
-
-          <SubSection title="Analytics and Customization Cookies">
-            <p>These collect aggregate information to understand website usage, measure marketing campaign effectiveness, and customize the site for users.</p>
-            <InfoRow label="Served by" value="Google Analytics" />
-            <InfoRow label="To refuse" value="Follow the instructions under 'How Can I Control Cookies?' below." />
-          </SubSection>
-
-          <SubSection title="Advertising Cookies">
-            <p>These make advertising more relevant by preventing repeated ads, ensuring proper display, and selecting interest-based ads.</p>
-            <InfoRow label="Served by" value="Google" />
-            <InfoRow label="To refuse" value="Follow the instructions under 'How Can I Control Cookies?' below." />
-          </SubSection>
+        <Section title="First and Third Party Cookies">
+          <p>Whether a cookie is &apos;first party&apos; or &apos;third party&apos; refers to the website or domain placing the cookie. First-party cookies are set by Mollura Medical Hair Restoration directly when you visit our site. Third-party cookies are placed by other companies whose features or services appear on our site. Mollura Medical Hair Restoration does not have access to or control over these third-party cookies.</p>
         </Section>
 
-        <Section title="What About Other Tracking Technologies, Like Web Beacons?">
-          <p>Beyond cookies, the site may use web beacons (also called tracking pixels or clear gifs). These tiny graphics contain unique identifiers enabling recognition of website visits or email opens. They monitor traffic patterns between pages, deliver cookies, track advertisement sources, improve site performance, and measure email marketing success. Many rely on cookies to function properly.</p>
+        <Section title="How We Use Cookies">
+          <p>We use cookies for a variety of reasons detailed below. Unfortunately, in most cases there are no industry standard options for disabling cookies without completely disabling the functionality and features they add to this site. It is recommended that you leave all cookies enabled if you are not sure whether you need them or not, in case they are used to provide a service that you use.</p>
         </Section>
 
-        <Section title="Do You Use Flash Cookies or Local Shared Objects?">
-          <p>The website may use Flash Cookies (Local Shared Objects) for collecting usage information, fraud prevention, and site operations.</p>
-          <p>To manage Flash Cookies, adjust your Flash Player settings through the Website Storage Settings Panel or Global Storage Settings Panel. You can delete existing Flash Cookies, prevent new ones from being set, and block non-operator cookies (Flash 8 and above).</p>
-          <p>Restricting Flash Cookies may reduce the functionality of Flash applications on the website.</p>
+        <Section title="Analytics Cookies">
+          <p>When you visit our website, we may automatically collect certain information about how you browse and interact with the site. We use analytics cookies to better understand how visitors use this site. We use this information to improve the website&apos;s content, structure, and user experience.</p>
+          <p><strong>Google Analytics</strong> - This website uses Google Analytics, a web analytics service provided by Google, Inc. Google Analytics uses &quot;cookies&quot; to help the website analyze how users use the site. The information generated by the cookie about your use of the website (including your IP address) will be transmitted to and stored by Google on servers in the United States. Google will use this information for the purpose of evaluating your use of the website, compiling reports on website activity for website operators and providing other services relating to website activity and internet usage. Google may also transfer this information to third parties where required to do so by law, or where such third parties process the information on Google&apos;s behalf. Google will not associate your IP address with any other data held by Google. By using this website, you consent to the processing of data about you by Google in the manner and for the purposes set out above.</p>
         </Section>
 
-        <Section title="Do You Serve Targeted Advertising?">
-          <p>Third parties serve cookies to display targeted advertising through the website. These companies use visit information across multiple websites to provide relevant ads and measure advertising effectiveness using cookies or web beacons. This process does not identify you by name or contact details unless you have provided them directly.</p>
+        <Section title="Advertising Cookies">
+          <p><strong>Google</strong> - Mollura Medical Hair Restoration works with Google to display targeted advertising across the web. These ads may appear on websites unrelated to us and are based on your interests and online behavior. These cookies allow Google to track your browsing patterns across websites. This information is used to help display ads that are more relevant to you.</p>
         </Section>
 
-        <Section title="How Can I Control Cookies?">
-          <p>You can decide whether to accept or reject cookies through your web browser controls. Rejecting cookies may restrict access to some functionality and areas of the site. Cookie refusal methods vary by browser, so check your browser's help menu for instructions.</p>
-          <p>Most advertising networks also offer opt-out options. For more information, visit:</p>
-          <ul style={{ color: '#444', lineHeight: 2, paddingLeft: 24 }}>
-            <li><a href="http://www.aboutads.info/choices/" target="_blank" rel="noreferrer" style={{ color: NAVY }}>www.aboutads.info/choices/</a></li>
-            <li><a href="http://www.youronlinechoices.com" target="_blank" rel="noreferrer" style={{ color: NAVY }}>www.youronlinechoices.com</a></li>
-          </ul>
+        <Section title="Flash Cookies">
+          <p>We may, in certain situations, use Adobe Flash Player to deliver special content, such as video clips or animation. To improve your user experience, Local Shared Objects (commonly known as &quot;Flash cookies&quot;) are employed to provide functions such as remembering your settings and preferences. Flash cookies are stored on your device, but they are managed through an interface different from the one provided by your web browser. This means it is not possible to manage Flash cookies through your browser in the same way you would manage cookies. Instead, you can access your Flash management tools from Adobe&apos;s website directly. Flash cookies will be deleted when you leave the site.</p>
         </Section>
 
-        <Section title="How Often Will You Update This Cookie Policy?">
-          <p>The policy may be updated to reflect changes in the cookies we use, or for operational, legal, or regulatory reasons. We encourage you to review it regularly for the most current information.</p>
+        <Section title="Web Beacons">
+          <p>We may use web beacons (also known as &quot;tracking pixels&quot;) on our website. These are small electronic files that permit us to count users who have visited certain pages or opened an email and for other related website statistics (for example, recording the popularity of a certain section and verifying system and server integrity).</p>
         </Section>
 
-        <Section title="Where Can I Get Further Information?">
-          <p>For information about our broader data practices, see our <a href="/privacy-policy" style={{ color: NAVY }}>Privacy Policy</a>.</p>
-          <p>For questions about this Cookie Policy, contact us:</p>
-          <address style={{ fontStyle: 'normal', color: '#444', lineHeight: 1.8, marginTop: 12 }}>
-            <strong>L.A.FUE Hair</strong><br />
-            400 Garden City Plaza, Suite 107<br />
-            Garden City, NY 11530<br />
-            <a href="tel:5169285500" style={{ color: NAVY }}>(516) 928-5500</a><br />
-            <a href="mailto:info@lafuehairnyc.com" style={{ color: NAVY }}>info@lafuehairnyc.com</a>
+        <Section title="Targeted Advertising">
+          <p>Third parties may use cookies, web beacons, and similar technologies to collect or receive information from this website and elsewhere on the internet and use that information to provide measurement services and target ads. You can opt-out of the collection and use of information for ad targeting by visiting <a href="http://www.aboutads.info/choices" target="_blank" rel="noreferrer" style={{ color: DARK }}>www.aboutads.info/choices</a>.</p>
+        </Section>
+
+        <Section title="How to Control Cookies">
+          <p>You can prevent the setting of cookies by adjusting the settings on your browser (see your browser Help for how to do this). Be aware that disabling cookies will affect the functionality of this and many other websites that you visit. Disabling cookies will usually result in also disabling certain functionality and features of this site. Therefore, it is recommended that you do not disable cookies.</p>
+          <p>You can also opt-out of Google Analytics by installing the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noreferrer" style={{ color: DARK }}>Google Analytics Opt-out Browser Add-on</a>.</p>
+        </Section>
+
+        <Section title="How Often Will We Update This Cookie Policy">
+          <p>We may update this Cookie Policy from time to time to reflect, for example, changes to the cookies we use or for other operational, legal, or regulatory reasons. Please therefore re-visit this Cookie Policy regularly to stay informed about our use of cookies and related technologies.</p>
+          <p>The date at the top of this Cookie Policy indicates when it was last updated.</p>
+        </Section>
+
+        <Section title="Contact Us">
+          <p>If you have any questions about our use of cookies or other technologies, please email us at <a href="mailto:Hairsurg@mollurahairtransplant.com" style={{ color: DARK }}>Hairsurg@mollurahairtransplant.com</a> or contact us at:</p>
+          <address style={{ fontStyle: 'normal', color: '#444', lineHeight: 1.9, marginTop: 8 }}>
+            <strong>Mollura Medical Hair Restoration</strong><br />
+            393 Franklin Avenue, Suite 105<br />
+            Franklin Square, NY 11010<br />
+            <a href="tel:5163543876" style={{ color: DARK }}>(516) 354-3876</a>
           </address>
         </Section>
       </main>
 
       {/* Footer */}
-      <footer style={{ background: DARK_NAV, padding: '40px 48px', textAlign: 'center' }}>
-        <img src="/logo-lafue.png" alt="L.A. FUE Hair NYC" style={{ height: 40, width: 'auto', marginBottom: 16 }} />
+      <footer style={{ background: DARK_NAV, padding: '32px 48px', textAlign: 'center' }}>
+        <img src="/logo-mollura.png" alt="Mollura Medical Hair Restoration" style={{ height: 48, width: 'auto', marginBottom: 16 }} />
         <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: 13, margin: '0 0 8px' }}>
-          400 Garden City Plaza, Suite 107, Garden City, NY 11530
+          393 Franklin Avenue, Suite 105, Franklin Square, NY 11010
         </p>
         <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: 13, margin: 0 }}>
-          <a href="/cookie-policy" style={{ color: 'rgba(255,255,255,0.5)', textDecoration: 'none', marginRight: 16 }}>Cookie Policy</a>
-          <a href="/privacy-policy" style={{ color: 'rgba(255,255,255,0.5)', textDecoration: 'none' }}>Privacy Policy</a>
+          <a href="/privacy-policy" style={{ color: 'rgba(255,255,255,0.5)', textDecoration: 'none', marginRight: 16 }}>Privacy Policy</a>
+          <a href="/cookie-policy" style={{ color: 'rgba(255,255,255,0.5)', textDecoration: 'none' }}>Cookie Policy</a>
         </p>
       </footer>
     </div>
@@ -120,30 +103,12 @@ export default function CookiePolicyPage() {
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <section style={{ marginBottom: 48 }}>
-      <h2 style={{ fontSize: 20, fontWeight: 700, color: '#2e2e2f', marginBottom: 16, paddingBottom: 10, borderBottom: '2px solid #e8e8e8' }}>
+      <h2 style={{ fontSize: 18, fontWeight: 700, color: '#2a2a34', marginBottom: 16, paddingBottom: 10, borderBottom: '2px solid #e8e8e8' }}>
         {title}
       </h2>
       <div style={{ fontSize: 15, lineHeight: 1.85, color: '#444', display: 'flex', flexDirection: 'column', gap: 14 }}>
         {children}
       </div>
     </section>
-  )
-}
-
-function SubSection({ title, children }: { title: string; children: React.ReactNode }) {
-  return (
-    <div style={{ background: '#f7f9fc', padding: '20px 24px', borderRadius: 6, border: '1px solid #e4eaf2' }}>
-      <h3 style={{ fontSize: 15, fontWeight: 600, color: '#2e2e2f', margin: '0 0 10px' }}>{title}</h3>
-      <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>{children}</div>
-    </div>
-  )
-}
-
-function InfoRow({ label, value }: { label: string; value: string }) {
-  return (
-    <p style={{ margin: 0, fontSize: 14 }}>
-      <span style={{ fontWeight: 600, color: '#2e2e2f' }}>{label}:</span>{' '}
-      <span style={{ color: '#555' }}>{value}</span>
-    </p>
   )
 }

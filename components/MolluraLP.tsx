@@ -1097,7 +1097,7 @@ export default function MolluraLP({
             lineHeight: '30px',
             margin: 0,
           }}>
-            &copy; 2025 Hair Restoration &bull; <a href="/privacy-policy" style={{ color: '#2c2e2b', textDecoration: 'none' }}>Privacy Policy</a> &bull; <a href="/hipaa-policy" style={{ color: '#2c2e2b', textDecoration: 'none' }}>HIPAA Policy</a>
+            &copy; 2025 Hair Restoration &bull; <a href="/privacy-policy" style={{ color: '#2c2e2b', textDecoration: 'none' }}>Privacy Policy</a> &bull; <a href="/cookie-policy" style={{ color: '#2c2e2b', textDecoration: 'none' }}>Cookie Policy</a>
           </p>
         </div>
       </section>

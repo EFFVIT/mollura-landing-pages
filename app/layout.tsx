@@ -15,7 +15,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* GTM_ID_PLACEHOLDER — replace with real GTM ID before launch */}
         <Script
           id="gtm-script"
           strategy="afterInteractive"
@@ -24,7 +23,7 @@ export default function RootLayout({
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-XXXXXXX');`,
+})(window,document,'script','dataLayer','GTM-P57BCVBC');`,
           }}
         />
       </head>
@@ -37,7 +36,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         />
         <noscript>
           <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+            src="https://www.googletagmanager.com/ns.html?id=GTM-P57BCVBC"
             height="0"
             width="0"
             style={{ display: 'none', visibility: 'hidden' }}
