@@ -1,3 +1,4 @@
+import DniSwap from '@/components/DniSwap'
 import Script from 'next/script'
 import './globals.css'
 
@@ -28,6 +29,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         />
       </head>
       <body>
+        <DniSwap />
         <Script
           src="https://widgets.leadconnectorhq.com/loader.js"
           data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
