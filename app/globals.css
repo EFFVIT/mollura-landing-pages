@@ -183,3 +183,21 @@ button { font-family: inherit; }
   /* Footer copyright padding */
   .mol-footer-bar { padding: 16px 20px 28px !important; }
 }
+
+/* ═══ Mollura Meta / Paid-Social LPs – Responsive Overrides ═══ */
+
+@media (max-width: 900px) {
+  .mol-mnav        { padding: 16px 20px !important; }
+  .mol-mnav-logo   { height: 46px !important; }
+  .mol-mnav-btns   { gap: 8px !important; flex-wrap: wrap; }
+  .mol-mnav-btn    { font-size: 12px !important; padding: 10px 14px !important; }
+  .mol-m-hero-inner { padding: 120px 20px 48px !important; grid-template-columns: 1fr !important; }
+}
+
+@media (max-width: 768px) {
+  .mol-m-hero-inner { padding: 110px 20px 44px !important; }
+  .mol-m-h1  { font-size: 30px !important; }
+  .mol-m-h2  { font-size: 26px !important; }
+  /* On mobile, images that sit left of text render after it for reading order */
+  .mol-m-order2 { order: 2; }
+}
