@@ -149,9 +149,6 @@ export default function MolluraMetaLP({ heroFormId, bottomFormId }: { heroFormId
             </p>
           </div>
           <div id="hero-form" style={{ background: WHITE, borderRadius: 12, padding: '26px 24px 22px', boxShadow: '0 20px 50px rgba(0,0,0,0.35)' }}>
-            <p style={{ fontFamily: POPPINS, fontWeight: 500, fontSize: 15, color: INK, margin: '0 0 14px', textAlign: 'center' }}>
-              Every treatment plan is customized&mdash;no templates, no shortcuts.
-            </p>
             <GhlForm formId={heroFormId} height={430} formName="Meta Hero - Mollura Consult" />
           </div>
         </div>
@@ -414,7 +411,7 @@ export function MolluraMetaRetargetingLP({ heroFormId, bottomFormId }: { heroFor
             <p style={{ fontFamily: POPPINS, fontWeight: 600, fontSize: 20, color: WHITE, borderLeft: `4px solid ${TEAL}`, paddingLeft: 16, margin: '0 0 22px' }}>
               Hair restoration is not a commodity
             </p>
-            <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.9)', fontWeight: 600, margin: '0 0 10px' }}>Cost Reflects:</p>
+            <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.9)', fontWeight: 600, margin: '0 0 10px' }}>Cost reflects:</p>
             {['The surgeon’s experience', 'Technique selection (FUE vs FUT)', 'Planning and long-term outcome'].map(i => (
               <div key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: 4, marginBottom: 8 }}>
                 <Arrow /><span style={{ fontSize: 15, color: 'rgba(255,255,255,0.9)' }}>{i}</span>
