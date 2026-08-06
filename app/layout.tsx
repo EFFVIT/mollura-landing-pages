@@ -2,6 +2,7 @@ import DniSwap from '@/components/DniSwap'
 import Script from 'next/script'
 import Fab from '@/components/fab/Fab'
 import GtmTags from '@/components/GtmTags'
+import ConsultCreditPopup from '@/components/ConsultCreditPopup'
 import './globals.css'
 
 export const metadata = {
@@ -22,6 +23,7 @@ export default function RootLayout({
         <GtmTags />
         <Fab client="mollura" />
         <DniSwap />
+        <ConsultCreditPopup />
         <Script
           src="https://widgets.leadconnectorhq.com/loader.js"
           data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
