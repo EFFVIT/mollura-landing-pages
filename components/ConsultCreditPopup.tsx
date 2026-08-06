@@ -87,11 +87,13 @@ export default function ConsultCreditPopup() {
           boxShadow: '0 25px 70px rgba(0,0,0,0.35)',
           maxWidth: 748,
           width: '100%',
-          padding: '56px 48px 40px 48px',
+          maxHeight: '90vh',
+          overflowY: 'auto',
+          padding: 'clamp(32px, 8vw, 56px) clamp(20px, 6vw, 48px) clamp(24px, 6vw, 40px)',
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-          gap: 20,
+          gap: 'clamp(14px, 3vw, 20px)',
           fontFamily: "'Jost', 'Open Sans', sans-serif",
         }}
       >
@@ -102,8 +104,8 @@ export default function ConsultCreditPopup() {
           aria-label="Close"
           style={{
             position: 'absolute',
-            top: 16,
-            right: 16,
+            top: 12,
+            right: 12,
             width: 32,
             height: 32,
             border: 'none',
@@ -118,10 +120,11 @@ export default function ConsultCreditPopup() {
         </button>
 
         <p style={{
-          width: 652,
+          width: '100%',
+          maxWidth: 652,
           fontFamily: "'Jost', sans-serif",
           fontWeight: 700,
-          fontSize: 13,
+          fontSize: 'clamp(11px, 3vw, 13px)',
           lineHeight: 1,
           letterSpacing: '0.12em',
           textAlign: 'center',
@@ -132,10 +135,11 @@ export default function ConsultCreditPopup() {
         </p>
 
         <h2 style={{
-          width: 652,
+          width: '100%',
+          maxWidth: 652,
           fontFamily: manrope.style.fontFamily,
           fontWeight: 700,
-          fontSize: 32,
+          fontSize: 'clamp(22px, 6vw, 32px)',
           lineHeight: 1.12,
           letterSpacing: 'normal',
           textAlign: 'center',
@@ -145,10 +149,11 @@ export default function ConsultCreditPopup() {
         </h2>
 
         <p style={{
-          width: 652,
+          width: '100%',
+          maxWidth: 652,
           fontFamily: "'Jost', sans-serif",
           fontWeight: 600,
-          fontSize: 15,
+          fontSize: 'clamp(13px, 3.5vw, 15px)',
           lineHeight: 1.3,
           letterSpacing: '0.06em',
           textAlign: 'center',
@@ -158,13 +163,14 @@ export default function ConsultCreditPopup() {
           Toward Your Hair Restoration Treatment Plan
         </p>
 
-        <div style={{ width: 56, height: 3, borderRadius: 2, background: CORAL }} />
+        <div style={{ width: 56, height: 3, borderRadius: 2, background: CORAL, flexShrink: 0 }} />
 
         <p style={{
-          width: 652,
+          width: '100%',
+          maxWidth: 652,
           fontFamily: "'Jost', sans-serif",
           fontWeight: 400,
-          fontSize: 16,
+          fontSize: 'clamp(14px, 3.5vw, 16px)',
           lineHeight: 1.5,
           letterSpacing: 'normal',
           textAlign: 'center',
@@ -176,16 +182,17 @@ export default function ConsultCreditPopup() {
         <button
           onClick={handleCta}
           style={{
-            width: 652,
+            width: '100%',
+            maxWidth: 652,
             background: CORAL,
             color: WHITE,
             fontFamily: "'Roboto', sans-serif",
             fontWeight: 700,
-            fontSize: 16,
+            fontSize: 'clamp(14px, 3.5vw, 16px)',
             textTransform: 'uppercase',
             border: 'none',
             borderRadius: 62,
-            padding: '18px 32px',
+            padding: 'clamp(14px, 3vw, 18px) 24px',
             cursor: 'pointer',
           }}
         >
@@ -193,10 +200,11 @@ export default function ConsultCreditPopup() {
         </button>
 
         <p style={{
-          width: 652,
+          width: '100%',
+          maxWidth: 652,
           fontFamily: "'Jost', sans-serif",
           fontWeight: 400,
-          fontSize: 12,
+          fontSize: 'clamp(11px, 3vw, 12px)',
           lineHeight: 1.45,
           letterSpacing: 'normal',
           textAlign: 'center',
