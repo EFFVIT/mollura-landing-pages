@@ -87,11 +87,11 @@ export default function ConsultCreditPopup() {
           boxShadow: '0 25px 70px rgba(0,0,0,0.35)',
           maxWidth: 748,
           width: '100%',
-          padding: '56px 48px 40px 48px',
+          padding: 'clamp(32px, 9vw, 56px) clamp(20px, 6vw, 48px) clamp(24px, 6vw, 40px)',
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-          gap: 20,
+          gap: 'clamp(14px, 3vw, 20px)',
           fontFamily: "'Jost', 'Open Sans', sans-serif",
         }}
       >
@@ -118,7 +118,7 @@ export default function ConsultCreditPopup() {
         </button>
 
         <p style={{
-          width: 652,
+          width: '100%',
           fontFamily: "'Jost', sans-serif",
           fontWeight: 700,
           fontSize: 13,
@@ -132,10 +132,10 @@ export default function ConsultCreditPopup() {
         </p>
 
         <h2 style={{
-          width: 652,
+          width: '100%',
           fontFamily: manrope.style.fontFamily,
           fontWeight: 700,
-          fontSize: 32,
+          fontSize: 'clamp(24px, 6vw, 32px)',
           lineHeight: 1.12,
           letterSpacing: 'normal',
           textAlign: 'center',
@@ -145,7 +145,7 @@ export default function ConsultCreditPopup() {
         </h2>
 
         <p style={{
-          width: 652,
+          width: '100%',
           fontFamily: "'Jost', sans-serif",
           fontWeight: 600,
           fontSize: 15,
@@ -158,10 +158,10 @@ export default function ConsultCreditPopup() {
           Toward Your Hair Restoration Treatment Plan
         </p>
 
-        <div style={{ width: 56, height: 3, borderRadius: 2, background: CORAL }} />
+        <div style={{ width: 56, height: 3, borderRadius: 2, background: CORAL, flexShrink: 0 }} />
 
         <p style={{
-          width: 652,
+          width: '100%',
           fontFamily: "'Jost', sans-serif",
           fontWeight: 400,
           fontSize: 16,
@@ -176,7 +176,7 @@ export default function ConsultCreditPopup() {
         <button
           onClick={handleCta}
           style={{
-            width: 652,
+            width: '100%',
             background: CORAL,
             color: WHITE,
             fontFamily: "'Roboto', sans-serif",
@@ -193,7 +193,7 @@ export default function ConsultCreditPopup() {
         </button>
 
         <p style={{
-          width: 652,
+          width: '100%',
           fontFamily: "'Jost', sans-serif",
           fontWeight: 400,
           fontSize: 12,
