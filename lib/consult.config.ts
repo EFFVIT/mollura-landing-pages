@@ -14,7 +14,7 @@
    schema.org wins.
 
    NOTE FOR THIS CLIENT:
-   CALENDAR MISMATCH: no 'Consultation: In Person'/'Consultation: Virtual' 60min pair exists on this sub-account. Using the 30min 'Consultation Request' + 'Virtual Consultation'. Copy says 30 minutes to match what the calendar actually books.
+   The canonical 60min consult pair did NOT exist on this sub-account and was CREATED on 2026-08-17 at Joe's direction, mirroring this practice's OWN published days and hours from their existing 'Consultation Request' / 'Virtual Consultation' calendars — only the name and the duration changed. Both verified returning live 60min slots. The original 30min calendars were left untouched and still exist; nothing that already books on them was changed.
    ========================================================================== */
 
 export const CONSULT = {
@@ -30,15 +30,15 @@ export const CONSULT = {
      confirming both return free slots. These already existed; nothing was
      created in the client's account. */
   calendars: {
-    'in-person': 'lmC7rI802gDhFWtvrYYW',
-    virtual: 'HajLGh6yXabsacDQTMlM',
+    'in-person': 'usY9WLyDqBMGdbDOZHyx',
+    virtual: 'Oe87pWCX7MPukHz6AztP',
   },
 
   /* Read from the calendar's own slotDuration — never asserted. Saying "one
      hour" over a calendar that books 30 minutes is a promise the system of
      record does not keep. */
-  durationMinutes: 30,
-  durationLabel: '30 minutes',
+  durationMinutes: 60,
+  durationLabel: '60 minutes',
 
   address: '393 Franklin Avenue, Suite 105',
   city: 'Franklin Square, NY 11010',
@@ -66,8 +66,8 @@ export const CONSULT = {
   postsApi: 'https://mollurahairtransplant.com/wp-json/wp/v2/posts?per_page=3&_fields=id,link,date,title',
 
   headline: 'Book your consultation.',
-  subhead: '30 minutes with Mollura Medical Hair Restoration, in person in Franklin Square or by video. Choose a time below and it is confirmed on the practice calendar straight away.',
-  metaDescription: 'Book a 30 minutes consultation with Mollura Medical Hair Restoration. In person in Franklin Square or by video.',
+  subhead: '60 minutes with Mollura Medical Hair Restoration, in person in Franklin Square or by video. Choose a time below and it is confirmed on the practice calendar straight away.',
+  metaDescription: 'Book a 60 minutes consultation with Mollura Medical Hair Restoration. In person in Franklin Square or by video.',
 
   /* EMPTY BY DESIGN, awaiting the practice's own photographs.
      No before/after and no identifiable patient — before/after imagery is a
