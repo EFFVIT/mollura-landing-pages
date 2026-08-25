@@ -59,6 +59,29 @@ function injectFormEmbedOnce() {
   }, 50)
 }
 
+// Runs synchronously as a useState lazy initializer on the client, so the
+// iframe renders on the first React commit instead of after a useEffect cycle.
+// Returns null during SSR (typeof window === 'undefined') so the placeholder
+// renders server-side — complies with Rule 1 (src never mutated post-mount).
+function buildFormSrc(formId: string, widgetBase: string): string | null {
+  if (typeof window === 'undefined') return null
+  const urlParams = new URLSearchParams(window.location.search)
+  const out = new URLSearchParams()
+  ;[...CLICK_ID_KEYS, ...UTM_KEYS].forEach(key => {
+    const val = urlParams.get(key) || sessionStorage.getItem(key)
+    if (val) {
+      try { sessionStorage.setItem(key, val) } catch { /* private mode */ }
+      out.set(key, val)
+    }
+  })
+  const gclid = out.get('gclid')
+  if (gclid) { out.set('gclid-of', gclid); out.set('gclidof', gclid) }
+  const fbclid = out.get('fbclid')
+  if (fbclid) { out.set('fbclid-of', fbclid); out.set('fbclidof', fbclid) }
+  const qs = out.toString()
+  return qs ? `${widgetBase}/${formId}?${qs}` : `${widgetBase}/${formId}`
+}
+
 export default function GhlForm({
   formId,
   height = 620,
@@ -71,34 +94,8 @@ export default function GhlForm({
   host?: string
 }) {
   const widgetBase = `https://${host}/widget/form`
-  // null until params are resolved — the iframe does not render before then.
-  const [src, setSrc] = useState<string | null>(null)
+  const [src] = useState<string | null>(() => buildFormSrc(formId, widgetBase))
   const iframeId = `inline-${formId}`
-
-  useEffect(() => {
-    const urlParams = new URLSearchParams(window.location.search)
-    const out = new URLSearchParams()
-
-    // sessionStorage fallback keeps attribution alive across internal
-    // navigation, where the landing params are no longer in the URL.
-    ;[...CLICK_ID_KEYS, ...UTM_KEYS].forEach(key => {
-      const val = urlParams.get(key) || sessionStorage.getItem(key)
-      if (val) {
-        try { sessionStorage.setItem(key, val) } catch { /* private mode */ }
-        out.set(key, val)
-      }
-    })
-
-    // utm_* and gbraid/wbraid slugs match their params exactly; the two click
-    // ids whose GHL field keys differ get aliased to every spelling in use.
-    const gclid = out.get('gclid')
-    if (gclid) { out.set('gclid-of', gclid); out.set('gclidof', gclid) }
-    const fbclid = out.get('fbclid')
-    if (fbclid) { out.set('fbclid-of', fbclid); out.set('fbclidof', fbclid) }
-
-    const qs = out.toString()
-    setSrc(qs ? `${widgetBase}/${formId}?${qs}` : `${widgetBase}/${formId}`)
-  }, [formId, widgetBase])
 
   useEffect(() => {
     if (src) injectFormEmbedOnce()
