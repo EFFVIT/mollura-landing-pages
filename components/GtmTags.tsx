@@ -39,7 +39,18 @@ const GA_ID = 'G-08F2EPZWDZ'
 
    Suppressing a tag on a medical page can only ever reduce exposure, so this
    edit cannot hide a violation. */
-const HEALTH_INTENT_ROUTES = ['/c/consult']
+/* WIDENED 2026-08-25 TO THE WHOLE /c PREFIX, on Joe's explicit call, as part of
+   the fleet-wide LP sweep that day. The narrow ['/c/consult'] scope this
+   replaces was correct when written and went silently wrong as soon as more /c
+   routes were added: a route gate written against the routes that existed the
+   day it was written (H-45). Verified live before the change that this app was
+   serving a browser Google tag on health-intent consult form pages, which is
+   H-26 / FM7 and non-waivable on a BAA-covered practice.
+
+   Gating the PREFIX means adding a /c route no longer requires remembering this
+   file. Suppressing a tag on a medical page can only reduce exposure, so this
+   cannot hide a violation; widening it back belongs to Joe (H-43). */
+const HEALTH_INTENT_ROUTES = ['/c']
 const isHealthIntent = (p: string) =>
   HEALTH_INTENT_ROUTES.some((r) => p === r || p.startsWith(r + '/'))
 
