@@ -10,7 +10,22 @@ import { useEffect } from 'react'
 
 const DNI_ENDPOINT = 'https://control.effvit.com/api/dni/lease'
 const CLIENT = 'mollura'
-const DEFAULT_DIGITS = '5163543876'
+
+// Every static number this app can render. One DniSwap is mounted in the root
+// layout, but the pages below it do NOT all show the same number, so a single
+// DEFAULT_DIGITS constant silently swaps nothing on the pages that show a
+// different one:
+//   5163543876  /c/consult          (ConsultFunnel, from lib/consult.config.ts)
+//   5166144608  /c/hair-transplant, /c/hair-restoration, /c/evaluation (MolluraLP)
+//   5162199738  Meta LP             (MolluraMetaLP)
+// Found 2026-09-03: DEFAULT_DIGITS was 5163543876 while /c/hair-transplant —
+// which takes ~98% of Google Ads spend — renders 5166144608. The lease was
+// granted on every paid session and then applied to a number that was not on
+// the page, so 81 of 166 inbound calls in 90 days arrived on the untracked
+// static line with no gclid attached. Add a number here whenever a page starts
+// rendering one; the Sage repo solves the same problem with a prop instead,
+// which is the better shape if these pages ever stop sharing a layout.
+const DEFAULT_DIGITS_LIST = ['5163543876', '5166144608', '5162199738'] as const
 
 function formatDashes(e164: string): string {
   const d = e164.replace(/\D/g, '').replace(/^1/, '')
@@ -24,14 +39,17 @@ function swapNumber(e164: string) {
 
   // tel: links (any href carrying the default digits, with or without +1)
   document.querySelectorAll<HTMLAnchorElement>('a[href^="tel:"]').forEach((a) => {
-    if (a.href.replace(/\D/g, '').includes(DEFAULT_DIGITS)) {
+    const href = a.href.replace(/\D/g, '')
+    if (DEFAULT_DIGITS_LIST.some((d) => href.includes(d))) {
       a.href = `tel:+1${digits}`
     }
   })
 
   // visible text nodes containing any common formatting of the default number
   const pattern = new RegExp(
-    `\\(?${DEFAULT_DIGITS.slice(0, 3)}\\)?[\\s.\\-]?${DEFAULT_DIGITS.slice(3, 6)}[\\s.\\-]?${DEFAULT_DIGITS.slice(6)}`,
+    DEFAULT_DIGITS_LIST.map(
+      (d) => `\\(?${d.slice(0, 3)}\\)?[\\s.\\-]?${d.slice(3, 6)}[\\s.\\-]?${d.slice(6)}`,
+    ).join('|'),
     'g',
   )
   const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT)
