@@ -5,7 +5,7 @@ import GclidCapture from './GclidCapture'
 
 // ── DESIGN TOKENS ──────────────────────────────────────────────────────────
 const DARK_NAV  = '#2a2a34'
-const DARK      = '#175566'
+const DARK      = '#0d849f'
 const DARK_CARD = '#1a3f4f'
 const TEAL      = '#337b8f'
 const STEEL     = '#5a677c'

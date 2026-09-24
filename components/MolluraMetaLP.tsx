@@ -10,7 +10,7 @@ import GclidCapture from './GclidCapture'
 // Copy reproduced verbatim from source (medical wording intentionally not softened).
 
 // ── BRAND TOKENS ─────────────────────────────────────────────────────────────
-const TEAL_DARK = '#175566'   // primary CTA + dark bands
+const TEAL_DARK = '#0d849f'   // primary CTA + dark bands
 const TEAL = '#337b8f'
 const TEAL_DEEP = '#125064'   // icon strokes
 const PANEL = '#eef4f8'

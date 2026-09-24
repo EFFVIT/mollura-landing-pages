@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   robots: 'noindex, nofollow',
 }
 
-const DARK     = '#175566'
+const DARK     = '#0d849f'
 const DARK_NAV = '#2a2a34'
 const WHITE    = '#ffffff'
 
