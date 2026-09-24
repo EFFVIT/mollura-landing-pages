@@ -11,7 +11,7 @@ import GclidCapture from './GclidCapture'
 
 // ── BRAND TOKENS ─────────────────────────────────────────────────────────────
 const TEAL_DARK = '#0d849f'   // primary CTA + dark bands
-const TEAL = '#337b8f'
+const TEAL = '#04435d'
 const TEAL_DEEP = '#125064'   // icon strokes
 const PANEL = '#eef4f8'
 const INK = '#1a1a1a'
