@@ -1049,40 +1049,32 @@ export default function MolluraLP({
 
           </div>
 
-          {/* Phone + Address */}
+          {/* Locations */}
           <div className="mol-contact-row" style={{
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'flex-start',
-            gap: 80,
+            gap: 48,
             padding: '48px 0 32px',
             flexWrap: 'wrap' as const,
           }}>
-            <a href="tel:+15166144608" style={{ display: 'flex', alignItems: 'center', gap: 12, textDecoration: 'none' }}>
-              <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path d="M20.3 16.9L17.6 14.2C16.8 13.4 15.5 13.4 14.7 14.2L13.3 15.6C12.8 16.1 12 16.1 11.5 15.7C10.2 14.8 9 13.7 7.9 12.5C6.8 11.4 5.8 10.2 4.9 8.9C4.5 8.4 4.5 7.6 5 7.1L6.4 5.7C7.2 4.9 7.2 3.6 6.4 2.8L3.7 0.1C2.9-0.7 1.6-0.7 0.8 0.1L0.1 0.8C-1.4 2.3 0.4 7.5 5.8 12.8C11.1 18.1 16.3 19.8 17.8 18.3L18.5 17.6C19.3 16.9 19.3 15.7 18.5 14.9L20.3 16.9Z" fill={DARK}/>
-              </svg>
-              <span style={{
-                fontFamily: "'Roboto', sans-serif",
-                fontWeight: 700,
-                fontSize: 25,
-                color: DARK,
-                lineHeight: 'normal',
-              }}>(516) 614-4608</span>
-            </a>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-              <svg width="18" height="29" viewBox="0 0 18 29" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path d="M9 0C4 0 0 4 0 9C0 15.8 9 29 9 29C9 29 18 15.8 18 9C18 4 14 0 9 0ZM9 12C7.3 12 6 10.7 6 9C6 7.3 7.3 6 9 6C10.7 6 12 7.3 12 9C12 10.7 10.7 12 9 12Z" fill={DARK}/>
-              </svg>
-              <div>
-                <p style={{ fontFamily: "'Jost', sans-serif", fontWeight: 700, fontSize: 18, color: DARK, lineHeight: 'normal', margin: 0 }}>
-                  393 Franklin Avenue Suite 105
-                </p>
-                <p style={{ fontFamily: "'Roboto', sans-serif", fontWeight: 400, fontSize: 18, color: '#2c2e2b', lineHeight: 'normal', margin: 0 }}>
-                  Franklin Square, NY 11010
-                </p>
+            {[
+              { city: 'Franklin Square', street: '393 Franklin Ave, Suite 105', cityState: 'Franklin Square, NY 11010', phone: '(516) 354-3876', href: 'tel:+15163543876' },
+              { city: 'Smithtown',       street: '2 Brooksite Dr #230',         cityState: 'Smithtown, NY 11787',       phone: '(631) 257-7227', href: 'tel:+16312577227' },
+              { city: 'New York',        street: '114 E 61st St',               cityState: 'New York, NY 10065',        phone: '(212) 813-9333', href: 'tel:+12128139333' },
+            ].map(loc => (
+              <div key={loc.city} style={{ display: 'flex', alignItems: 'flex-start', gap: 12, minWidth: 200 }}>
+                <svg width="18" height="29" viewBox="0 0 18 29" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style={{ flexShrink: 0, marginTop: 3 }}>
+                  <path d="M9 0C4 0 0 4 0 9C0 15.8 9 29 9 29C9 29 18 15.8 18 9C18 4 14 0 9 0ZM9 12C7.3 12 6 10.7 6 9C6 7.3 7.3 6 9 6C10.7 6 12 7.3 12 9C12 10.7 10.7 12 9 12Z" fill={DARK}/>
+                </svg>
+                <div>
+                  <p style={{ fontFamily: "'Jost', sans-serif", fontWeight: 700, fontSize: 18, color: DARK, lineHeight: 'normal', margin: '0 0 2px' }}>{loc.city}</p>
+                  <p style={{ fontFamily: "'Jost', sans-serif", fontWeight: 400, fontSize: 16, color: DARK, lineHeight: 'normal', margin: 0 }}>{loc.street}</p>
+                  <p style={{ fontFamily: "'Roboto', sans-serif", fontWeight: 400, fontSize: 16, color: '#2c2e2b', lineHeight: 'normal', margin: '0 0 6px' }}>{loc.cityState}</p>
+                  <a href={loc.href} style={{ fontFamily: "'Roboto', sans-serif", fontWeight: 700, fontSize: 17, color: DARK, textDecoration: 'none', lineHeight: 'normal' }}>{loc.phone}</a>
+                </div>
               </div>
-            </div>
+            ))}
           </div>
 
         </div>
