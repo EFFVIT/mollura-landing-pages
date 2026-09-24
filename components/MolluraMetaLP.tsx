@@ -17,6 +17,7 @@ const PANEL = '#eef4f8'
 const INK = '#1a1a1a'
 const BODY = '#4a5560'
 const WHITE = '#ffffff'
+const BTN = '#e76f51'
 const SERIF = "'Judson', Georgia, 'Times New Roman', serif"
 const SANS = "'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
 const POPPINS = "'Poppins', sans-serif"
@@ -44,7 +45,7 @@ function Nav({ ctaLabel }: { ctaLabel: string }) {
       />
       <div className="mol-mnav-btns" style={{ display: 'flex', gap: 14, alignItems: 'center' }}>
         <a href="#hero-form" className="mol-mnav-btn" style={{
-          background: TEAL_DARK, color: WHITE, fontFamily: "'Roboto', sans-serif", fontWeight: 500,
+          background: BTN, color: WHITE, fontFamily: "'Roboto', sans-serif", fontWeight: 500,
           fontSize: 14, textTransform: 'uppercase', letterSpacing: '0.04em', borderRadius: 62,
           padding: '13px 22px', textDecoration: 'none', whiteSpace: 'nowrap',
         }}>{ctaLabel}</a>
@@ -110,7 +111,7 @@ function SectionHeading({ children, color = INK, align = 'center', max = 760 }: 
 function ctaBtn(label: string, href = '#hero-form', dark = false) {
   return (
     <a href={href} style={{
-      display: 'inline-block', background: dark ? WHITE : TEAL_DARK, color: dark ? TEAL_DARK : WHITE,
+      display: 'inline-block', background: dark ? WHITE : BTN, color: dark ? BTN : WHITE,
       fontFamily: "'Roboto', sans-serif", fontWeight: 600, fontSize: 14, textTransform: 'uppercase',
       letterSpacing: '0.04em', borderRadius: 62, padding: '15px 30px', textDecoration: 'none', whiteSpace: 'nowrap',
     }}>{label}</a>

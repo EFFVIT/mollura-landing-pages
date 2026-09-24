@@ -18,7 +18,7 @@
   --ink:#10333D; --muted:#55707A;
   --rule:#D9E6EC; --rule-strong:#55707A; --placeholder:#55707A;
   --plum:#10333D; --plum-deep:#10333D; --orange:#175566; --accent-text:#175566;
-  --signal:#175566; --signal-hover:#0F3D4A; --on-signal:#FFFFFF;
+  --signal:#e76f51; --signal-hover:#d45e3e; --on-signal:#FFFFFF;
   --ok:#175566; --danger:#B3261E; --focus:#175566;
 }
 

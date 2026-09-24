@@ -11,6 +11,7 @@ const TEAL      = '#337b8f'
 const STEEL     = '#5a677c'
 const PANEL     = '#eef4f8'
 const WHITE     = '#ffffff'
+const BTN       = '#e76f51'
 
 // ── STEP ICONS ─────────────────────────────────────────────────────────────
 
@@ -281,7 +282,7 @@ export default function MolluraLP({
             href="#form"
             className="mol-nav-btn"
             style={{
-              background: DARK,
+              background: BTN,
               color: WHITE,
               fontFamily: "'Roboto', sans-serif",
               fontWeight: 500,
@@ -559,7 +560,7 @@ export default function MolluraLP({
           href="#form"
           style={{
             display: 'inline-block',
-            background: DARK,
+            background: BTN,
             color: WHITE,
             fontFamily: "'Roboto', sans-serif",
             fontWeight: 500,
@@ -742,7 +743,7 @@ export default function MolluraLP({
                 href="#form"
                 style={{
                   display: 'inline-block',
-                  background: DARK,
+                  background: BTN,
                   color: WHITE,
                   fontFamily: "'Roboto', sans-serif",
                   fontWeight: 500,
@@ -901,7 +902,7 @@ export default function MolluraLP({
                 href="#form"
                 style={{
                   display: 'inline-block',
-                  background: DARK,
+                  background: BTN,
                   color: WHITE,
                   fontFamily: "'Roboto', sans-serif",
                   fontWeight: 500,
