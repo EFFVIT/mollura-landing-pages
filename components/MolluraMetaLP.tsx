@@ -10,13 +10,14 @@ import GclidCapture from './GclidCapture'
 // Copy reproduced verbatim from source (medical wording intentionally not softened).
 
 // ── BRAND TOKENS ─────────────────────────────────────────────────────────────
-const TEAL_DARK = '#175566'   // primary CTA + dark bands
-const TEAL = '#337b8f'
+const TEAL_DARK = '#0d849f'   // primary CTA + dark bands
+const TEAL = '#04435d'
 const TEAL_DEEP = '#125064'   // icon strokes
 const PANEL = '#eef4f8'
 const INK = '#1a1a1a'
 const BODY = '#4a5560'
 const WHITE = '#ffffff'
+const BTN = '#e76f51'
 const SERIF = "'Judson', Georgia, 'Times New Roman', serif"
 const SANS = "'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
 const POPPINS = "'Poppins', sans-serif"
@@ -24,7 +25,11 @@ const POPPINS = "'Poppins', sans-serif"
 const PHONE = '516-219-9738'
 const PHONE_HREF = 'tel:5162199738'
 const EMAIL = 'Hairsurg@mollurahairtransplant.com'
-const ADDRESS = '393 Franklin Avenue Suite 105, Franklin Square, NY, 11010'
+const LOCATIONS = [
+  { city: 'Franklin Square', street: '393 Franklin Ave, Suite 105', cityState: 'Franklin Square, NY 11010', phone: '(516) 354-3876', href: 'tel:+15163543876' },
+  { city: 'Smithtown',       street: '2 Brooksite Dr #230',         cityState: 'Smithtown, NY 11787',       phone: '(631) 257-7227', href: 'tel:+16312577227' },
+  { city: 'New York',        street: '114 E 61st St',               cityState: 'New York, NY 10065',        phone: '(212) 813-9333', href: 'tel:+12128139333' },
+]
 const LOGO = '/logo-mollura.png'
 
 // ── SHARED PIECES ────────────────────────────────────────────────────────────
@@ -44,7 +49,7 @@ function Nav({ ctaLabel }: { ctaLabel: string }) {
       />
       <div className="mol-mnav-btns" style={{ display: 'flex', gap: 14, alignItems: 'center' }}>
         <a href="#hero-form" className="mol-mnav-btn" style={{
-          background: TEAL_DARK, color: WHITE, fontFamily: "'Roboto', sans-serif", fontWeight: 500,
+          background: BTN, color: WHITE, fontFamily: "'Roboto', sans-serif", fontWeight: 500,
           fontSize: 14, textTransform: 'uppercase', letterSpacing: '0.04em', borderRadius: 62,
           padding: '13px 22px', textDecoration: 'none', whiteSpace: 'nowrap',
         }}>{ctaLabel}</a>
@@ -110,7 +115,7 @@ function SectionHeading({ children, color = INK, align = 'center', max = 760 }: 
 function ctaBtn(label: string, href = '#hero-form', dark = false) {
   return (
     <a href={href} style={{
-      display: 'inline-block', background: dark ? WHITE : TEAL_DARK, color: dark ? TEAL_DARK : WHITE,
+      display: 'inline-block', background: dark ? WHITE : BTN, color: dark ? BTN : WHITE,
       fontFamily: "'Roboto', sans-serif", fontWeight: 600, fontSize: 14, textTransform: 'uppercase',
       letterSpacing: '0.04em', borderRadius: 62, padding: '15px 30px', textDecoration: 'none', whiteSpace: 'nowrap',
     }}>{label}</a>
@@ -274,10 +279,15 @@ export default function MolluraMetaLP({ heroFormId, bottomFormId }: { heroFormId
         <div className="two-col" style={{ maxWidth: 1050, margin: '0 auto', gap: 48, alignItems: 'center' }}>
           <div>
             <SectionHeading align="left" max={480}>If You&rsquo;re Going to Do This, Do It Informed</SectionHeading>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 12, marginTop: 20 }}>
-              <a href={PHONE_HREF} style={{ color: INK, fontWeight: 600, fontSize: 16, textDecoration: 'none' }}>{PHONE}</a>
-              <a href={`mailto:${EMAIL}`} style={{ color: INK, fontWeight: 600, fontSize: 16, textDecoration: 'none' }}>{EMAIL}</a>
-              <span style={{ color: BODY, fontSize: 15 }}>{ADDRESS}</span>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 16, marginTop: 20 }}>
+              <a href={`mailto:${EMAIL}`} style={{ color: INK, fontWeight: 600, fontSize: 15, textDecoration: 'none' }}>{EMAIL}</a>
+              {LOCATIONS.map(loc => (
+                <div key={loc.city} style={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
+                  <span style={{ color: INK, fontWeight: 700, fontSize: 14 }}>{loc.city}</span>
+                  <span style={{ color: BODY, fontSize: 14 }}>{loc.street}, {loc.cityState}</span>
+                  <a href={loc.href} style={{ color: INK, fontWeight: 600, fontSize: 14, textDecoration: 'none' }}>{loc.phone}</a>
+                </div>
+              ))}
             </div>
           </div>
           <div id="final-form" style={{ background: PANEL, borderRadius: 14, padding: '26px 24px' }}>
@@ -529,10 +539,15 @@ export function MolluraMetaRetargetingLP({ heroFormId, bottomFormId }: { heroFor
                 </div>
               ))}
             </div>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
-              <a href={PHONE_HREF} style={{ color: WHITE, fontWeight: 600, fontSize: 16, textDecoration: 'none' }}>{PHONE}</a>
-              <a href={`mailto:${EMAIL}`} style={{ color: WHITE, fontWeight: 600, fontSize: 16, textDecoration: 'none' }}>{EMAIL}</a>
-              <span style={{ color: 'rgba(255,255,255,0.85)', fontSize: 15 }}>{ADDRESS}</span>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+              <a href={`mailto:${EMAIL}`} style={{ color: WHITE, fontWeight: 600, fontSize: 15, textDecoration: 'none' }}>{EMAIL}</a>
+              {LOCATIONS.map(loc => (
+                <div key={loc.city} style={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
+                  <span style={{ color: WHITE, fontWeight: 700, fontSize: 14 }}>{loc.city}</span>
+                  <span style={{ color: 'rgba(255,255,255,0.85)', fontSize: 14 }}>{loc.street}, {loc.cityState}</span>
+                  <a href={loc.href} style={{ color: WHITE, fontWeight: 600, fontSize: 14, textDecoration: 'none' }}>{loc.phone}</a>
+                </div>
+              ))}
             </div>
           </div>
           <div id="final-form" style={{ background: WHITE, borderRadius: 14, padding: '26px 24px 22px' }}>

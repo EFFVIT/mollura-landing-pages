@@ -49,6 +49,39 @@ button { font-family: inherit; }
   align-items: start;
 }
 
+/* ═══ Testimonial scroll wall ═══ */
+@keyframes mol-scroll-up {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-50%); }
+}
+.mol-twall {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  height: 640px;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to bottom, transparent, #000 8%, #000 92%, transparent);
+          mask-image: linear-gradient(to bottom, transparent, #000 8%, #000 92%, transparent);
+}
+.mol-ttrack { height: 100%; overflow: hidden; }
+.mol-ttrack__inner {
+  display: flex;
+  flex-direction: column;
+  animation: mol-scroll-up var(--mol-duration, 45s) linear infinite;
+}
+.mol-ttrack:hover .mol-ttrack__inner,
+.mol-ttrack__inner:focus-within { animation-play-state: paused; }
+.mol-ttrack__set {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  flex-shrink: 0;
+  padding-bottom: 24px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .mol-ttrack__inner { animation: none; }
+}
+
 @media (max-width: 768px) {
   .hero-grid { grid-template-columns: 1fr; min-height: auto; }
   .financing-grid { grid-template-columns: 1fr; }
@@ -139,8 +172,19 @@ button { font-family: inherit; }
   /* Bio */
   .mol-bio-grid { grid-template-columns: 1fr !important; }
 
-  /* Reviews */
+  /* Reviews / testimonial wall */
   .mol-reviews-grid { grid-template-columns: 1fr !important; }
+  .mol-twall {
+    grid-template-columns: 1fr;
+    height: auto;
+    -webkit-mask-image: none;
+            mask-image: none;
+  }
+  .mol-twall .mol-ttrack {
+    height: 420px;
+    -webkit-mask-image: linear-gradient(to bottom, transparent, #000 8%, #000 92%, transparent);
+            mask-image: linear-gradient(to bottom, transparent, #000 8%, #000 92%, transparent);
+  }
 
   /* Financing */
   .mol-fin-section { grid-template-columns: 1fr !important; }

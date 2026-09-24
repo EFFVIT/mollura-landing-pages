@@ -5,12 +5,13 @@ import GclidCapture from './GclidCapture'
 
 // ── DESIGN TOKENS ──────────────────────────────────────────────────────────
 const DARK_NAV  = '#2a2a34'
-const DARK      = '#175566'
+const DARK      = '#0d849f'
 const DARK_CARD = '#1a3f4f'
-const TEAL      = '#337b8f'
+const TEAL      = '#04435d'
 const STEEL     = '#5a677c'
 const PANEL     = '#eef4f8'
 const WHITE     = '#ffffff'
+const BTN       = '#e76f51'
 
 // ── STEP ICONS ─────────────────────────────────────────────────────────────
 
@@ -281,7 +282,7 @@ export default function MolluraLP({
             href="#form"
             className="mol-nav-btn"
             style={{
-              background: DARK,
+              background: BTN,
               color: WHITE,
               fontFamily: "'Roboto', sans-serif",
               fontWeight: 500,
@@ -559,7 +560,7 @@ export default function MolluraLP({
           href="#form"
           style={{
             display: 'inline-block',
-            background: DARK,
+            background: BTN,
             color: WHITE,
             fontFamily: "'Roboto', sans-serif",
             fontWeight: 500,
@@ -742,7 +743,7 @@ export default function MolluraLP({
                 href="#form"
                 style={{
                   display: 'inline-block',
-                  background: DARK,
+                  background: BTN,
                   color: WHITE,
                   fontFamily: "'Roboto', sans-serif",
                   fontWeight: 500,
@@ -762,62 +763,76 @@ export default function MolluraLP({
       </section>
 
       {/* ── REVIEWS ──────────────────────────────────────────────────────── */}
-      <section className="mol-pad" style={{ background: '#f4f8fb', padding: '80px 48px' }}>
-        <div style={{ maxWidth: 1100, margin: '0 auto' }}>
-          <h2 className="mol-h2-xl" style={{
-            fontFamily: "'Judson', Georgia, serif",
-            fontWeight: 400,
-            fontSize: 40,
-            lineHeight: 1.129,
-            color: '#000000',
-            textAlign: 'center',
-            marginBottom: 40,
-          }}>
-            Real Patients. Real Results.
-          </h2>
-          <p style={{
-            fontFamily: "'Poppins', sans-serif",
-            fontWeight: 500,
-            fontSize: 25,
-            color: '#000000',
-            textAlign: 'center',
-            lineHeight: 'normal',
-            marginBottom: 40,
-          }}>
-            Feedback may be collected to improve educational communication. Individual experiences vary.
-          </p>
-          <div className="mol-reviews-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24 }}>
+      <section className="mol-pad" style={{ background: TEAL, padding: '96px 48px', overflow: 'hidden' }}>
+        <div style={{ maxWidth: 1260, margin: '0 auto' }}>
+          <div style={{ textAlign: 'center', marginBottom: 40 }}>
+            <p style={{ fontFamily: "'Open Sans', sans-serif", fontWeight: 600, fontSize: 12, textTransform: 'uppercase' as const, letterSpacing: '0.1em', color: 'rgba(255,255,255,0.6)', marginBottom: 12 }}>Testimonials</p>
+            <h2 className="mol-h2-xl" style={{ fontFamily: "'Judson', Georgia, serif", fontWeight: 400, fontSize: 40, lineHeight: 1.129, color: WHITE, margin: 0 }}>
+              What Our Clients Are Saying
+            </h2>
+          </div>
+          <div className="mol-twall">
             {[
               {
-                text: 'I want to thank Dr. Mollura and the staff for their professionalism and the respectful way my concerns were handled. The team was attentive, supportive, and communicated clearly throughout my experience.',
-                name: 'James A.',
+                duration: '42s',
+                cards: [
+                  { initials: 'LC', name: 'Linda C.', text: '“No Hat!” Thanks so much for all your efforts and support in helping my husband achieve a wonderful and luxurious head of hair. Not only are you exceptional in your field of hair transplantation you are also so encouraging with your very personal approach in achieving your patients desired goals.' },
+                  { initials: 'MA', name: 'Michael A', text: 'I was completely satisfied with my results. I appreciated the professionalism and efficiency of everyone in this office. I felt Dr Mullora put time and care into delivering the best results in a very safe way. I healed faster than I expected and I appreciate his experience in making good decisions. The technicians were fantastic, fast and thorough!! The facility was clean. I highly recommend!' },
+                  { initials: 'AW', name: 'A Woz.', text: 'I am rarely moved in a positive way that I feel compelled to go online and write a review. However, I can’t say enough great things about the experience I had at Mollura Medical. Dr. Mollura was incredibly helpful in discussing my procedure and providing me with all of the information I needed to make an informed decision. His bedside manner is the best I have ever experienced — and his work is even better. I highly recommend him and his work.' },
+                  { initials: 'MW', name: 'Matt W.', text: 'Hi everybody I just wanted to leave a review about the awesome job Dr. Mollura did on my head. Yes hair transplants work. Service and price were on point and now I have a full head of hair. Thank you for your help.' },
+                ],
               },
               {
-                text: 'Thank you for the time, support, and personal approach shown to my family. We appreciated the encouragement, clear communication, and professionalism throughout the process.',
-                name: 'Linda C.',
+                duration: '52s',
+                cards: [
+                  { initials: 'JA', name: 'James A.', text: 'I would like to take the opportunity to thank you both professionally and personally for the mannerisms in which you and your staff members handled my hair transplant procedure. The results of the work you have done is remarkable and very gratifying to me.' },
+                  { initials: 'FL', name: 'Frank L.', text: 'Dr. Mollura is a true pro. Had a transplant done two years ago and the work he did on my hairline was masterful. He was very communicative through the whole procedure and there for me after the procedure as well. Such a good job, people can’t even tell I had anything done. Highly Recommend.' },
+                  { initials: 'AM', name: 'Albert M.', text: 'Dr. Mollura and his staff were wonderful. He made me feel very comfortable on every visit to his office. I’m very impressed with his surgical skills, compassion, caring and professionalism. I feel fortunate to have met him. Thank you.' },
+                  { initials: 'BB', name: 'Bill B.', text: 'I met Dr. Mollura 14 years ago. After researching many doctors, I determined that Dr. Mollura was the best. The surgery was a huge success — so I definitely made the right choice in doctors! Last year, I decided to do a touch up, and was absolutely thrilled that Dr. Mollura was still in practice. Dr. Mollura is the best hair restoration surgeon in the business. He will explain the entire procedure with absolutely no pressure. He is truly an artist.' },
+                  { initials: 'BS', name: 'Barbie S.', text: 'I just had a hair transplant procedure with Dr. Mollura and I honestly can’t say enough about him, his staff and his magical hands. He is professional, caring and honest — and his staff is top notch! If you are thinking of doing it look no further than Mollura Medical!' },
+                ],
               },
               {
-                text: 'I appreciated the professionalism and efficiency of everyone in the office. Dr. Mollura took time to listen and made me feel cared for throughout my visit.',
-                name: 'Jonathan S.',
+                duration: '47s',
+                cards: [
+                  { initials: 'JF', name: 'John F.', text: 'Over the past six years, I’ve undergone two procedures with Dr. Mollura — one focusing on the front and the other on the back — and I couldn’t be happier with the results. The outcome has been so transformative, and I truly appreciate the ongoing care and support he provides. Dr. Mollura is the person you can trust to deliver exceptional results.' },
+                  { initials: 'DA', name: 'Daniel', text: 'Dr. Mollura is a great doctor who explains the process thoroughly, and makes it his mission to give you the best treatment for your specific circumstance.' },
+                  { initials: 'TO', name: 'Trish O', text: 'Dr. Tony is the best hands down!! During consultation, he gave me a direct, honest and easy to understand breakdown of my hair issues and treatment options. No pressure to undertake any expensive procedure — just plain straightforward analysis. Rarely these days do you come across a most caring and honest professional who genuinely cares about their client. I can’t sing his praises enough. I highly recommend Dr. Tony Mollura!' },
+                  { initials: 'AN', name: 'Anonymous', text: 'My journey to seek hair treatment was a long one, and I consulted with two other hair transplant companies before finally connecting with Dr. Mollura. From our first conversation, his friendly demeanor and honest approach made all the difference. He clearly explained what to expect, and it was evident that I was dealing with someone with a lifetime of expertise in his field.' },
+                ],
               },
-            ].map((review, i) => (
-              <div
-                key={i}
-                style={{
-                  background: WHITE,
-                  borderRadius: 12,
-                  padding: '32px 28px',
-                  boxShadow: '0 2px 12px rgba(0,0,0,0.06)',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  gap: 16,
-                }}
-              >
-                <img src="/quote-icon.png" alt="" aria-hidden="true" style={{ width: 32, height: 'auto' }} />
-                <p style={{ fontSize: 14, lineHeight: 1.75, color: '#444', flex: 1 }}>{review.text}</p>
-                <div>
-                  <StarRow />
-                  <p style={{ fontSize: 13, fontWeight: 700, color: DARK, marginTop: 8 }}>- {review.name}</p>
+            ].map(track => (
+              <div key={track.duration} className="mol-ttrack" style={{ '--mol-duration': track.duration } as React.CSSProperties}>
+                <div className="mol-ttrack__inner">
+                  {([false, true] as const).map(hidden => (
+                    <div key={String(hidden)} className="mol-ttrack__set" aria-hidden={hidden || undefined}>
+                      {track.cards.map(card => (
+                        <blockquote key={card.name} style={{
+                          display: 'block',
+                          background: 'rgba(255,255,255,0.06)',
+                          border: '1px solid rgba(255,255,255,0.08)',
+                          borderRadius: 10,
+                          padding: 24,
+                          textAlign: 'left' as const,
+                          margin: 0,
+                        }}>
+                          <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: 15, lineHeight: 1.6, marginBottom: 16 }}>{card.text}</p>
+                          <footer style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+                            <span style={{
+                              width: 40, height: 40, minWidth: 40, borderRadius: '50%',
+                              background: DARK, color: WHITE,
+                              display: 'flex', alignItems: 'center', justifyContent: 'center',
+                              fontFamily: "'Judson', Georgia, serif", fontSize: 13, fontWeight: 700,
+                            }}>{card.initials}</span>
+                            <div>
+                              <cite style={{ display: 'block', fontStyle: 'normal', fontWeight: 700, color: WHITE, fontSize: 15 }}>{card.name}</cite>
+                              <span style={{ display: 'block', color: 'rgba(255,255,255,0.55)', fontSize: 13 }}>Mollura Patient</span>
+                            </div>
+                          </footer>
+                        </blockquote>
+                      ))}
+                    </div>
+                  ))}
                 </div>
               </div>
             ))}
@@ -901,7 +916,7 @@ export default function MolluraLP({
                 href="#form"
                 style={{
                   display: 'inline-block',
-                  background: DARK,
+                  background: BTN,
                   color: WHITE,
                   fontFamily: "'Roboto', sans-serif",
                   fontWeight: 500,
@@ -1048,40 +1063,32 @@ export default function MolluraLP({
 
           </div>
 
-          {/* Phone + Address */}
+          {/* Locations */}
           <div className="mol-contact-row" style={{
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'flex-start',
-            gap: 80,
+            gap: 48,
             padding: '48px 0 32px',
             flexWrap: 'wrap' as const,
           }}>
-            <a href="tel:+15166144608" style={{ display: 'flex', alignItems: 'center', gap: 12, textDecoration: 'none' }}>
-              <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path d="M20.3 16.9L17.6 14.2C16.8 13.4 15.5 13.4 14.7 14.2L13.3 15.6C12.8 16.1 12 16.1 11.5 15.7C10.2 14.8 9 13.7 7.9 12.5C6.8 11.4 5.8 10.2 4.9 8.9C4.5 8.4 4.5 7.6 5 7.1L6.4 5.7C7.2 4.9 7.2 3.6 6.4 2.8L3.7 0.1C2.9-0.7 1.6-0.7 0.8 0.1L0.1 0.8C-1.4 2.3 0.4 7.5 5.8 12.8C11.1 18.1 16.3 19.8 17.8 18.3L18.5 17.6C19.3 16.9 19.3 15.7 18.5 14.9L20.3 16.9Z" fill={DARK}/>
-              </svg>
-              <span style={{
-                fontFamily: "'Roboto', sans-serif",
-                fontWeight: 700,
-                fontSize: 25,
-                color: DARK,
-                lineHeight: 'normal',
-              }}>(516) 614-4608</span>
-            </a>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-              <svg width="18" height="29" viewBox="0 0 18 29" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path d="M9 0C4 0 0 4 0 9C0 15.8 9 29 9 29C9 29 18 15.8 18 9C18 4 14 0 9 0ZM9 12C7.3 12 6 10.7 6 9C6 7.3 7.3 6 9 6C10.7 6 12 7.3 12 9C12 10.7 10.7 12 9 12Z" fill={DARK}/>
-              </svg>
-              <div>
-                <p style={{ fontFamily: "'Jost', sans-serif", fontWeight: 700, fontSize: 18, color: DARK, lineHeight: 'normal', margin: 0 }}>
-                  393 Franklin Avenue Suite 105
-                </p>
-                <p style={{ fontFamily: "'Roboto', sans-serif", fontWeight: 400, fontSize: 18, color: '#2c2e2b', lineHeight: 'normal', margin: 0 }}>
-                  Franklin Square, NY 11010
-                </p>
+            {[
+              { city: 'Franklin Square', street: '393 Franklin Ave, Suite 105', cityState: 'Franklin Square, NY 11010', phone: '(516) 354-3876', href: 'tel:+15163543876' },
+              { city: 'Smithtown',       street: '2 Brooksite Dr #230',         cityState: 'Smithtown, NY 11787',       phone: '(631) 257-7227', href: 'tel:+16312577227' },
+              { city: 'New York',        street: '114 E 61st St',               cityState: 'New York, NY 10065',        phone: '(212) 813-9333', href: 'tel:+12128139333' },
+            ].map(loc => (
+              <div key={loc.city} style={{ display: 'flex', alignItems: 'flex-start', gap: 12, minWidth: 200 }}>
+                <svg width="18" height="29" viewBox="0 0 18 29" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style={{ flexShrink: 0, marginTop: 3 }}>
+                  <path d="M9 0C4 0 0 4 0 9C0 15.8 9 29 9 29C9 29 18 15.8 18 9C18 4 14 0 9 0ZM9 12C7.3 12 6 10.7 6 9C6 7.3 7.3 6 9 6C10.7 6 12 7.3 12 9C12 10.7 10.7 12 9 12Z" fill={DARK}/>
+                </svg>
+                <div>
+                  <p style={{ fontFamily: "'Jost', sans-serif", fontWeight: 700, fontSize: 18, color: DARK, lineHeight: 'normal', margin: '0 0 2px' }}>{loc.city}</p>
+                  <p style={{ fontFamily: "'Jost', sans-serif", fontWeight: 400, fontSize: 16, color: DARK, lineHeight: 'normal', margin: 0 }}>{loc.street}</p>
+                  <p style={{ fontFamily: "'Roboto', sans-serif", fontWeight: 400, fontSize: 16, color: '#2c2e2b', lineHeight: 'normal', margin: '0 0 6px' }}>{loc.cityState}</p>
+                  <a href={loc.href} style={{ fontFamily: "'Roboto', sans-serif", fontWeight: 700, fontSize: 17, color: DARK, textDecoration: 'none', lineHeight: 'normal' }}>{loc.phone}</a>
+                </div>
               </div>
-            </div>
+            ))}
           </div>
 
         </div>

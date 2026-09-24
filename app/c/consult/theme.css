@@ -17,9 +17,9 @@
   --ground:#F4F8FB; --panel:#FFFFFF; --field-bg:#FFFFFF;
   --ink:#10333D; --muted:#55707A;
   --rule:#D9E6EC; --rule-strong:#55707A; --placeholder:#55707A;
-  --plum:#10333D; --plum-deep:#10333D; --orange:#175566; --accent-text:#175566;
-  --signal:#175566; --signal-hover:#0F3D4A; --on-signal:#FFFFFF;
-  --ok:#175566; --danger:#B3261E; --focus:#175566;
+  --plum:#10333D; --plum-deep:#10333D; --orange:#0d849f; --accent-text:#0d849f;
+  --signal:#e76f51; --signal-hover:#d45e3e; --on-signal:#FFFFFF;
+  --ok:#0d849f; --danger:#B3261E; --focus:#0d849f;
 }
 
 /* Text wordmark treatment, used when the client has no logo asset. */
