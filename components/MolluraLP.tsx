@@ -251,8 +251,8 @@ interface Props {
 // ── MAIN COMPONENT ───────────────────────────────────────────────────────────
 
 export default function MolluraLP({
-  heroFormId = 'MERXSja58XwPWQkz54I0',
-  bottomFormId = 'cp78H1dY6oCkMQF6k56v',
+  heroFormId = 'SmD0uuaASCWinnkYrPdr',
+  bottomFormId = 'SPX4cDxP1YC4v7TyaVdS',
 }: Props) {
   return (
     <div style={{ fontFamily: "'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif", color: '#111' }}>
