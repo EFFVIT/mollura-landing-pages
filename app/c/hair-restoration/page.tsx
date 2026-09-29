@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function HairRestorationPage() {
   return (
     <MolluraLP
-      heroFormId="MERXSja58XwPWQkz54I0"
+      heroFormId="SmD0uuaASCWinnkYrPdr"
       bottomFormId="cp78H1dY6oCkMQF6k56v"
     />
   )
