@@ -12,7 +12,7 @@ export default function HairRestorationPage() {
   return (
     <MolluraLP
       heroFormId="SmD0uuaASCWinnkYrPdr"
-      bottomFormId="cp78H1dY6oCkMQF6k56v"
+      bottomFormId="SPX4cDxP1YC4v7TyaVdS"
     />
   )
 }
