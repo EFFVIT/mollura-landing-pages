@@ -1074,8 +1074,8 @@ export default function MolluraLP({
           }}>
             {[
               { city: 'Franklin Square', street: '393 Franklin Ave, Suite 105', cityState: 'Franklin Square, NY 11010', phone: '(516) 354-3876', href: 'tel:+15163543876' },
-              { city: 'Smithtown',       street: '2 Brooksite Dr #230',         cityState: 'Smithtown, NY 11787',       phone: '(631) 257-7227', href: 'tel:+16312577227' },
-              { city: 'New York',        street: '114 E 61st St',               cityState: 'New York, NY 10065',        phone: '(212) 813-9333', href: 'tel:+12128139333' },
+              { city: 'Smithtown',       street: '2 Brooksite Dr #230',         cityState: 'Smithtown, NY 11787', },
+              { city: 'New York',        street: '114 E 61st St',               cityState: 'New York, NY 10065', },
             ].map(loc => (
               <div key={loc.city} style={{ display: 'flex', alignItems: 'flex-start', gap: 12, minWidth: 200 }}>
                 <svg width="18" height="29" viewBox="0 0 18 29" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style={{ flexShrink: 0, marginTop: 3 }}>
@@ -1085,7 +1085,7 @@ export default function MolluraLP({
                   <p style={{ fontFamily: "'Jost', sans-serif", fontWeight: 700, fontSize: 18, color: DARK, lineHeight: 'normal', margin: '0 0 2px' }}>{loc.city}</p>
                   <p style={{ fontFamily: "'Jost', sans-serif", fontWeight: 400, fontSize: 16, color: DARK, lineHeight: 'normal', margin: 0 }}>{loc.street}</p>
                   <p style={{ fontFamily: "'Roboto', sans-serif", fontWeight: 400, fontSize: 16, color: '#2c2e2b', lineHeight: 'normal', margin: '0 0 6px' }}>{loc.cityState}</p>
-                  <a href={loc.href} style={{ fontFamily: "'Roboto', sans-serif", fontWeight: 700, fontSize: 17, color: DARK, textDecoration: 'none', lineHeight: 'normal' }}>{loc.phone}</a>
+                  {loc.href && (<a href={loc.href} style={{ fontFamily: "'Roboto', sans-serif", fontWeight: 700, fontSize: 17, color: DARK, textDecoration: 'none', lineHeight: 'normal' }}>{loc.phone}</a>)}
                 </div>
               </div>
             ))}

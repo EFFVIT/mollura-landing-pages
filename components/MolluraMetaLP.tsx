@@ -27,8 +27,8 @@ const PHONE_HREF = 'tel:5162199738'
 const EMAIL = 'Hairsurg@mollurahairtransplant.com'
 const LOCATIONS = [
   { city: 'Franklin Square', street: '393 Franklin Ave, Suite 105', cityState: 'Franklin Square, NY 11010', phone: '(516) 354-3876', href: 'tel:+15163543876' },
-  { city: 'Smithtown',       street: '2 Brooksite Dr #230',         cityState: 'Smithtown, NY 11787',       phone: '(631) 257-7227', href: 'tel:+16312577227' },
-  { city: 'New York',        street: '114 E 61st St',               cityState: 'New York, NY 10065',        phone: '(212) 813-9333', href: 'tel:+12128139333' },
+  { city: 'Smithtown',       street: '2 Brooksite Dr #230',         cityState: 'Smithtown, NY 11787', },
+  { city: 'New York',        street: '114 E 61st St',               cityState: 'New York, NY 10065', },
 ]
 const LOGO = '/logo-mollura.png'
 
@@ -285,7 +285,7 @@ export default function MolluraMetaLP({ heroFormId, bottomFormId }: { heroFormId
                 <div key={loc.city} style={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
                   <span style={{ color: INK, fontWeight: 700, fontSize: 14 }}>{loc.city}</span>
                   <span style={{ color: BODY, fontSize: 14 }}>{loc.street}, {loc.cityState}</span>
-                  <a href={loc.href} style={{ color: INK, fontWeight: 600, fontSize: 14, textDecoration: 'none' }}>{loc.phone}</a>
+                  {loc.href && (<a href={loc.href} style={{ color: INK, fontWeight: 600, fontSize: 14, textDecoration: 'none' }}>{loc.phone}</a>)}
                 </div>
               ))}
             </div>
@@ -545,7 +545,7 @@ export function MolluraMetaRetargetingLP({ heroFormId, bottomFormId }: { heroFor
                 <div key={loc.city} style={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
                   <span style={{ color: WHITE, fontWeight: 700, fontSize: 14 }}>{loc.city}</span>
                   <span style={{ color: 'rgba(255,255,255,0.85)', fontSize: 14 }}>{loc.street}, {loc.cityState}</span>
-                  <a href={loc.href} style={{ color: WHITE, fontWeight: 600, fontSize: 14, textDecoration: 'none' }}>{loc.phone}</a>
+                  {loc.href && (<a href={loc.href} style={{ color: WHITE, fontWeight: 600, fontSize: 14, textDecoration: 'none' }}>{loc.phone}</a>)}
                 </div>
               ))}
             </div>
