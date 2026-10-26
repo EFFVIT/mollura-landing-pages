@@ -297,7 +297,7 @@ export default function MolluraLP({
             Learn About Hair Loss
           </a>
           <a
-            href="tel:+15166144608"
+            href="tel:+15163543876"
             className="mol-nav-btn"
             style={{
               background: 'transparent',
@@ -312,7 +312,7 @@ export default function MolluraLP({
               whiteSpace: 'nowrap' as const,
             }}
           >
-            (516) 614-4608
+            (516) 354-3876
           </a>
         </div>
       </nav>
