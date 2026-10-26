@@ -16,7 +16,7 @@ const schema = {
       "@id": "https://mollurahairtransplant.com/#business",
       "name": "Mollura Medical Hair Restoration",
       "url": "https://mollurahairtransplant.com",
-      "telephone": "+15166144608",
+      "telephone": "+15163543876",
       "hasMap": "https://maps.app.goo.gl/sXkcRDJbZuu2PZiM7",
       "address": {
         "@type": "PostalAddress",
@@ -62,7 +62,7 @@ const schema = {
       "@id": "https://mollurahairtransplant.com/#organization",
       "name": "Mollura Medical Hair Restoration",
       "url": "https://mollurahairtransplant.com",
-      "telephone": "+15166144608",
+      "telephone": "+15163543876",
       "logo": {
         "@type": "ImageObject",
         "url": "https://mollurahairtransplant.com/logo-mollura.png"

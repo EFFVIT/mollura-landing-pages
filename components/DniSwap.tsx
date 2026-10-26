@@ -16,7 +16,7 @@ const CLIENT = 'mollura'
 // DEFAULT_DIGITS constant silently swaps nothing on the pages that show a
 // different one:
 //   5163543876  /c/consult          (ConsultFunnel, from lib/consult.config.ts)
-//   5166144608  /c/hair-transplant, /c/hair-restoration, /c/evaluation (MolluraLP)
+//   5163543876  /c/hair-transplant, /c/hair-restoration, /c/evaluation (MolluraLP; was 5166144608 until 2026-10-26)
 //   5162199738  Meta LP             (MolluraMetaLP)
 // Found 2026-09-03: DEFAULT_DIGITS was 5163543876 while /c/hair-transplant —
 // which takes ~98% of Google Ads spend — renders 5166144608. The lease was
